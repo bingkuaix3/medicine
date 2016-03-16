@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" component="$model/UI2/system/components/justep/window/window" design="device:m;" xid="window" class="window cYzMzYb" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cYzMzYb" components="$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/justep/button/button,">
+  <xhtml:style xmlns:xhtml="http://www.w3.org/1999/xhtml">null</xhtml:style>  
+  <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" __cid="cYzMzYb" class="cYzMzYb"/>  
+  <div class="x-panel-content cYzMzYb" xid="content1" __cid="cYzMzYb"> 
+    <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full cYzMzYb" xid="contents" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&quot;active&quot;:0}" __cid="cYzMzYb"> 
+      <div class="x-contents-content active cYzMzYb" xid="content2" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cYzMzYb">2222222
+        <a component="$model/UI2/system/components/justep/button/button" class="btn btn-default cYzMzYb" xid="button1" data-bind="component:{name:'$model/UI2/system/components/justep/button/button'}" data-config="{&quot;label&quot;:&quot;button&quot;,&quot;target&quot;:&quot;content3&quot;}" __cid="cYzMzYb"> 
+          <i xid="i1" __cid="cYzMzYb" class="cYzMzYb"/>  
+          <span xid="span1" __cid="cYzMzYb" class="cYzMzYb"/> 
+        </a> 
+      </div>  
+      <div class="x-contents-content cYzMzYb" xid="content3" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cYzMzYb">333333333</div> 
+    </div> 
+  </div>
+</div>

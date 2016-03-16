@@ -1,0 +1,392 @@
+.head {
+	width: 100%;
+	border: 1px solid rgb(238, 238, 238);
+	height: 7.5%;
+}
+
+.company {
+	float: left;
+	width: 17%;
+	height: 100%;
+	border: 1px solid rgb(238, 238, 238);
+	border-bottom: 0px solid rgb(238, 238, 238);
+	font-size: 25px;
+	font-weight: 600;
+	line-height: 50px;
+	padding-left: 20px;
+	letter-spacing: 1px
+}
+
+.serach {
+	float: left;
+	width: 17%;
+	height: 100%;
+	border: 1px solid rgb(238, 238, 238);
+	border-left: 0px solid rgb(238, 238, 238);
+	width: 17%;
+	border-bottom: 0px solid rgb(238, 238, 238);
+}
+
+input {
+	float: left;
+	border: 0px;
+	height: 34px;
+	font-size: 20px;
+	letter-spacing: 2px;
+	font-size: 10px;
+	height: 30px;
+	margin-top: 8px;
+	margin-left: 20px;
+}
+
+input:focus {
+	outline: none
+}
+
+.icon {
+	float: right;
+	width: 47px;
+	height: 47px;
+	background: url("../medicine/image/search.jpg") no-repeat scroll right
+		center transparent;
+}
+
+.portraitdiv {
+	width: 220px;
+	height: 100%;
+	float: right;
+}
+
+.portraitdiv div:hover {
+	background: rgb(249, 249, 249);
+	cursor: pointer
+}
+
+.email {
+	float: left;
+	width: 45px;
+	height: 100%;
+	border-left: 1px solid rgb(238, 238, 238);
+	padding-left: 15px;
+	padding-top: 14px
+}
+
+.notice {
+	float: left;
+	width: 45px;
+	height: 100%;
+	border-left: 1px solid rgb(238, 238, 238);
+	padding-left: 15px;
+	padding-top: 14px;
+}
+
+.portrait {
+	float: left;
+	height: 100%;
+	width: 130px;
+	border-left: 1px solid rgb(238, 238, 238);
+	padding-left: 8px;
+	padding-top: 12px;
+}
+
+.name {
+	float: left;
+	width: 70px;
+	padding-left: 10px;
+	padding-top: 2px;
+}
+
+.portraitimg {
+	float: left;
+	width: 25px;
+	height: 25px;
+	border-radius: 20px
+}
+
+.triangle {
+	float: left;
+	width: 20px;
+	height: 100%;
+	padding-left: 5px;
+	padding-top: 2px
+}
+
+.over {
+	display: none
+}
+
+.over-body {
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+	background-color: transpartent;
+	top: 0px;
+}
+
+.jt {
+	position: absolute;
+	right: 90px;
+	top: 42px;
+	display: none
+}
+
+.over-content {
+	position: absolute;
+	z-index: 101;
+	width: 150px;
+	height: 137px;
+	background-color: rgb(29, 41, 57);
+	right: 25px;
+	padding: 5px
+}
+
+.assortment {
+	width: 100%;
+	height: 32px;
+	border-radius: 2px;
+	font-size: 13px;
+	color: rgb(143, 147, 158);
+	line-height: 32px;
+	padding-left: 15px;
+	letter-spacing: 2px
+}
+
+.assortment:hover {
+	background: rgb(28, 175, 154);
+	cursor: pointer;
+	color: white
+}
+
+span {
+	padding-left: 10px
+}
+
+.menu {
+	float: left;
+	width: 17%;
+	height: 92.5%;
+	background: rgb(29, 41, 57);
+	padding: 15px;
+}
+
+.menudiv {
+	width: 200px;
+	height: 35px;
+	border-radius: 2px;
+	font-size: 15px;
+	font-weight: 500;
+	line-height: 35px;
+	padding-left: 15px;
+	margin-top: 2px;
+	color: rgb(143, 147, 158);
+}
+
+.menudiv:hover {
+	background: white;
+	cursor: pointer;
+	color: rgb(29, 41, 57)
+}
+
+.i {
+	float: left;
+	width: 20px;
+	height: 35px;
+}
+
+.p {
+	float: left;
+	width: 10px;
+	height: 30px;
+}
+
+.icon-android-add {
+	font-size: 9px;
+	margin-left: 70px
+}
+
+.icon-android-remove {
+	font-size: 9px;
+	margin-left: 70px
+}
+
+.submenu {
+	width: 100%;
+	height: 130px;
+	padding: 5px;
+	margin-top: 5px;
+}
+
+.submenudiv {
+	width: 100%;
+	height: 32px;
+	color: rgb(143, 147, 158);
+	font-size: 11px;
+	padding-left: 22px;
+}
+
+#wcl {
+	color: rgb(28, 175, 154);
+}
+
+.submenudiv:hover {
+	cursor: pointer;
+	color: rgb(28, 175, 154);
+}
+
+#extend {
+	background: rgb(28, 175, 154);
+	color: white
+}
+
+.title {
+	float: left;
+	width: 83%;
+	height: 10%;
+	background: rgb(247, 247, 247);
+	border-bottom: 1px solid rgb(211, 215, 219);
+	letter-spacing: 2px
+}
+
+.title span {
+	float: left;
+	margin-top: 17px;
+	margin-right: 17px;
+}
+
+.titleword {
+	width: 240px;
+	font-size: 25px;
+}
+
+#tieleicon {
+	float: left;
+	font-size: 45px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+.titlesubword {
+	float: left;
+	font-size: 10px;
+	color: rgb(143, 147, 158);
+	margin-top: 30px;
+}
+
+.loca {
+	height: 100%;
+	float: right;
+	font-size: 10px;
+	padding-right: 20px;
+	padding-top: 30px;
+}
+
+.loca span {
+	float: left;
+	margin-right: 0px;
+	margin-top: 0px;
+}
+
+.loca:first-child {
+	color: rgb(143, 147, 158);
+}
+
+.gray {
+	color: rgb(171, 171, 171)
+}
+
+.blue {
+	color: rgb(66, 139, 202)
+}
+
+.black {
+	color: rgb(51, 51, 51)
+}
+
+.main {
+	float: left;
+	width: 83%;
+	height: 82.5%;
+	background: rgb(228, 231, 234)
+}
+
+.table {
+	width: 96%;
+	height: 92%;
+	margin-left: 2%;
+	margin-top: 2%;
+	background: white;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 40px;
+	color: rgb(128, 136, 147);
+	padding-top: 0.5%;
+}
+
+.tabletitlediv {
+	width: 96%;
+	margin-left: 2%;
+	text-align: center;
+	height: 50px;
+	border-bottom: 3px solid rgb(238, 238, 238);
+	line-height: 50px;
+}
+
+.tabletitle {
+	color: black;
+	float: left;
+}
+
+.tabletitle.number {
+	width: 16%;
+}
+
+.tabletitle.consignee {
+	width: 16%;
+}
+
+.tabletitle.telephone {
+	width: 16%;
+}
+
+.tabletitle.area {
+	width: 16%;
+}
+
+.tabletitle.address {
+	width: 16%;
+}
+
+.tabletitle.details {
+	width: 16%;
+}
+
+i:hover {
+	cursor: pointer;
+}
+
+.page {
+	position: absolute;
+	width: 79%;
+	height: 40px;
+	right: 2%;
+	bottom: 4.5%;
+}
+
+.x-pagerbar.container-fluid {
+	margin-top: 8px
+}
+
+.x-row {
+	width: 96%;
+	height: 40px;
+	border-bottom: 1px solid rgb(238, 238, 238);
+	margin-left: 2%;
+	line-height: 20px;
+	text-align: center
+}
+
+.x-output {
+	line-height: 10px;
+	color: rgb(128, 136, 147)
+}

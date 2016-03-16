@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window cAJjA7z" component="$model/UI2/system/components/justep/window/window" design="device:m;" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cAJjA7z" components="$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">.main.cAJjA7z{width: 100%; height: 100%; background: rgb(239, 239, 244)} .title.cAJjA7z{width: 100%; height: 6%; background: white; font-size: 20px; text-align: center; line-height: 50px} .image.cAJjA7z{margin-top: 1px; width: 100%; height: 37%} .image.cAJjA7z img.cAJjA7z{width: 100%} .logistics.cAJjA7z{width: 100%; height: 22%; background: white; margin-top: 5%} #logisticstitle.cAJjA7z{font-size: 20px; height: 40px; line-height: 40px; color: black} .logistics.cAJjA7z div.cAJjA7z{font-size: 15px; width: 90%; height: 30px; line-height: 30px; margin-left: 5%; color: gray; border-bottom: 1px solid rgb(239, 239, 244)} #logisticsth.cAJjA7z{height: 60px; border-bottom: 0px} .letter.cAJjA7z{letter-spacing: 7.5px} .payment.cAJjA7z{width: 100%; height: 17%; background: white; margin-top: 5%} .payment.cAJjA7z div.cAJjA7z{font-size: 15px; width: 90%; height: 30px; line-height: 30px; margin-left: 5%; color: gray; border-bottom: 1px solid rgb(239, 239, 244)} #paymenttitle.cAJjA7z{font-size: 20px; height: 40px; line-height: 40px; color: black} .numer.cAJjA7z{margin-left: 15%} .transport.cAJjA7z{margin-left: 15%} #total.cAJjA7z{height: 60px; border-bottom: 0px} .total.cAJjA7z{font-size: 30px; color: red; line-height: 60px; margin-left: 50%} .button.cAJjA7z{margin-top: 5%} .button.cAJjA7z div.cAJjA7z{width: 120px; height: 35px; border-radius: 5px; color: white; text-align: center; line-height: 35px} .success.cAJjA7z{float: left; margin-left: 15%; background: rgb(28, 175, 154)} .fail.cAJjA7z{float: right; margin-right: 12%; background: rgb(240, 173, 78)}</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onParamsReceive:modelParamsReceive;onLoad:modelLoad" __cid="cAJjA7z" class="cAJjA7z"/>  
+  <div xmlns="" class="main cAJjA7z" __cid="cAJjA7z"> 
+    <div class="title cAJjA7z" __cid="cAJjA7z">商品信息</div>  
+    <div class="image cAJjA7z" __cid="cAJjA7z"> 
+      <img src="@justepContextPath@/v_8805fda1560c496d9dd1f351f4c5e773l_zh_CNs_desktopd_/medicine/image/blog.jpg" __cid="cAJjA7z" class="cAJjA7z"/> 
+    </div>  
+    <div class="logistics cAJjA7z" __cid="cAJjA7z"> 
+      <div id="logisticstitle" __cid="cAJjA7z" class="cAJjA7z">收货信息</div>  
+      <div __cid="cAJjA7z" class="cAJjA7z"> 
+        <span class="letter cAJjA7z" __cid="cAJjA7z">收货人:</span>  
+        <span id="consignee" __cid="cAJjA7z" class="cAJjA7z"/> 
+      </div>  
+      <div __cid="cAJjA7z" class="cAJjA7z">联系电话：
+        <span id="telephone" __cid="cAJjA7z" class="cAJjA7z"/> 
+      </div>  
+      <div id="logisticsth" __cid="cAJjA7z" class="cAJjA7z">收货地址：
+        <span id="address" __cid="cAJjA7z" class="cAJjA7z"/> 
+      </div> 
+    </div>  
+    <div class="payment cAJjA7z" __cid="cAJjA7z"> 
+      <div id="paymenttitle" __cid="cAJjA7z" class="cAJjA7z">商品信息</div>  
+      <div class="price cAJjA7z" __cid="cAJjA7z">单价：
+        <span id="price" __cid="cAJjA7z" class="cAJjA7z"/>  
+        <span class="numer cAJjA7z" __cid="cAJjA7z">数量:</span>  
+        <span id="number" __cid="cAJjA7z" class="cAJjA7z"/>  
+        <span class="transport cAJjA7z" __cid="cAJjA7z">运费:</span>  
+        <span id="transportprice" __cid="cAJjA7z" class="cAJjA7z"/> 
+      </div>  
+      <div id="total" __cid="cAJjA7z" class="cAJjA7z">合计：
+        <span class="total cAJjA7z" __cid="cAJjA7z"/> 
+      </div> 
+    </div>  
+    <div class="button cAJjA7z" __cid="cAJjA7z"> 
+      <div class="success cAJjA7z" __cid="cAJjA7z" data-bind="event:{click:$model._callModelFn.bind($model, 'div1Click')}">确认付款</div>  
+      <div class="fail cAJjA7z" __cid="cAJjA7z" data-bind="event:{click:$model._callModelFn.bind($model, 'div2Click')}">取消交易</div> 
+    </div> 
+  </div> 
+</div>

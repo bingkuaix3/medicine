@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<div xmlns="http://www.w3.org/1999/xhtml" xid="window" class="window cZzIfmm" component="$model/UI2/system/components/justep/window/window" design="device:pc" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cZzIfmm" components="$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/pagerLimitSelect/pagerLimitSelect,$model/UI2/system/components/justep/row/row,$model/UI2/system/components/justep/list/list,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/contents/contents,$model/UI2/system/components/bootstrap/pagination/pagination,$model/UI2/system/components/justep/windowContainer/windowContainer,$model/UI2/system/components/justep/contents/content,$model/UI2/system/components/justep/select/select,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/data/baasData,$model/UI2/system/components/justep/output/output,">  
+  <style xmlns="" xmlns:xhtml="http://www.w3.org/1999/xhtml">.title.cZzIfmm{width: 100%; height: 10%; background: rgba(200, 0, 0, 0.2)} .left.cZzIfmm{width: 10%; height: 90%; background: rgba(0, 0, 200, 0.2)} .jumbotron.cZzIfmm{margin-top: 5%; margin-left: 5%; width: 90%} #input1.cZzIfmm{margin-top: 10px; float: right} .search.cZzIfmm{padding-left: 20px} .x-col.cZzIfmm{text-align: center; height: 30px; line-height: 30px} .x-col.x-col-fixed.cZzIfmm{padding-top: 5px} #row2.cZzIfmm{margin-top: -30px; margin-bottom: 10px}</style>  
+  <div xmlns="" component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cZzIfmm" class="cZzIfmm"/>  
+  <nav xmlns="" class="navbar navbar-default navbar-static-top cZzIfmm" __cid="cZzIfmm"> 
+    <div class="container cZzIfmm" __cid="cZzIfmm"> 
+      <div class="navbar-header cZzIfmm" __cid="cZzIfmm"> 
+        <span class="navbar-brand cZzIfmm" __cid="cZzIfmm">订单管理</span> 
+      </div>  
+      <div id="navbar" class="navbar-collapse collapse cZzIfmm" __cid="cZzIfmm"> 
+        <ul class="nav navbar-nav cZzIfmm" id="first-ul" __cid="cZzIfmm"> 
+          <li id="1" __cid="cZzIfmm" class="cZzIfmm"> 
+            <a __cid="cZzIfmm" class="cZzIfmm">未处理订单</a> 
+          </li>  
+          <li id="2" __cid="cZzIfmm" class="cZzIfmm"> 
+            <a __cid="cZzIfmm" class="cZzIfmm">已处理订单</a> 
+          </li>  
+          <li id="3" __cid="cZzIfmm" class="cZzIfmm"> 
+            <a __cid="cZzIfmm" class="cZzIfmm">已付款订单</a> 
+          </li>  
+          <li id="4" __cid="cZzIfmm" class="cZzIfmm"> 
+            <a __cid="cZzIfmm" class="cZzIfmm">已完成订单</a> 
+          </li> 
+        </ul>  
+        <ul class="nav navbar-nav navbar-right cZzIfmm" __cid="cZzIfmm"> 
+          <li class="search cZzIfmm" __cid="cZzIfmm"> 
+            <input type="text" class="form-control cZzIfmm" placeholder="搜索" id="input1" __cid="cZzIfmm"/> 
+          </li> 
+        </ul> 
+      </div> 
+    </div> 
+  </nav>  
+  <div xmlns="" class="container cZzIfmm" __cid="cZzIfmm"> 
+    <div component="$model/UI2/system/components/justep/contents/contents" class="x-contents x-full cZzIfmm" xid="pages" data-bind="component:{name:'$model/UI2/system/components/justep/contents/contents'}" data-config="{&quot;active&quot;:0}" __cid="cZzIfmm"> 
+      <div class="x-contents-content active cZzIfmm" xid="index" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cZzIfmm"> 
+        <div class="jumbotron cZzIfmm" __cid="cZzIfmm"> 
+          <div component="$model/UI2/system/components/justep/row/row" class="x-row cZzIfmm" id="row2" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cZzIfmm"> 
+            <div class="x-col x-col-10 cZzIfmm" xid="col7" __cid="cZzIfmm">订单数量</div>  
+            <div class="x-col x-col-10 cZzIfmm" xid="col8" __cid="cZzIfmm">收货人</div>  
+            <div class="x-col x-col-20 cZzIfmm" xid="col9" __cid="cZzIfmm">联系电话</div>  
+            <div class="x-col x-col-20 cZzIfmm" xid="col10" __cid="cZzIfmm">地区</div>  
+            <div class="x-col cZzIfmm" xid="col11" __cid="cZzIfmm">详细地址</div>  
+            <div class="x-col x-col-fixed cZzIfmm" xid="col12" style="width:auto;" __cid="cZzIfmm">详情</div> 
+          </div>  
+          <div component="$model/UI2/system/components/justep/list/list" class="x-list cZzIfmm" xid="list1" data-bind="component:{name:'$model/UI2/system/components/justep/list/list'}" data-config="{&quot;autoLoad&quot;:true,&quot;data&quot;:&quot;medicinedata&quot;}" __cid="cZzIfmm"> 
+            <ul class="x-list-template hide cZzIfmm" xid="listTemplateUl1" __cid="cZzIfmm" data-bind="foreach:{data:$model.foreach_list1($element),afterRender:$model.foreach_afterRender_list1.bind($model,$element)}"> 
+              <li xid="li3" class="data cZzIfmm" __cid="cZzIfmm"> 
+                <div component="$model/UI2/system/components/justep/row/row" class="x-row x-row-center cZzIfmm" xid="row1" data-bind="component:{name:'$model/UI2/system/components/justep/row/row'}" __cid="cZzIfmm"> 
+                  <div class="x-col x-col-10 cZzIfmm" xid="col1" __cid="cZzIfmm"> 
+                    <div component="$model/UI2/system/components/justep/output/output" class="x-output cZzIfmm" xid="output1" data-bind="component:{ref:ref('number'),name:'$model/UI2/system/components/justep/output/output'}" __cid="cZzIfmm"/> 
+                  </div>  
+                  <div class="x-col x-col-10 cZzIfmm" xid="col2" __cid="cZzIfmm"> 
+                    <div component="$model/UI2/system/components/justep/output/output" class="x-output cZzIfmm" xid="output2" data-bind="component:{ref:ref('consignee'),name:'$model/UI2/system/components/justep/output/output'}" __cid="cZzIfmm"/> 
+                  </div>  
+                  <div class="x-col x-col-20 cZzIfmm" xid="col3" __cid="cZzIfmm"> 
+                    <div component="$model/UI2/system/components/justep/output/output" class="x-output cZzIfmm" xid="output3" data-bind="component:{ref:ref('telephone'),name:'$model/UI2/system/components/justep/output/output'}" __cid="cZzIfmm"/> 
+                  </div>  
+                  <div class="x-col x-col-20 cZzIfmm" xid="col4" __cid="cZzIfmm"> 
+                    <div component="$model/UI2/system/components/justep/output/output" class="x-output cZzIfmm" xid="output4" data-bind="component:{ref:ref('area'),name:'$model/UI2/system/components/justep/output/output'}" __cid="cZzIfmm"/> 
+                  </div>  
+                  <div class="x-col cZzIfmm" xid="col5" __cid="cZzIfmm"> 
+                    <div component="$model/UI2/system/components/justep/output/output" class="x-output cZzIfmm" xid="output5" data-bind="component:{ref:ref('address'),name:'$model/UI2/system/components/justep/output/output'}" __cid="cZzIfmm"/> 
+                  </div>  
+                  <div class="x-col x-col-fixed cZzIfmm" xid="col6" style="width:auto;" __cid="cZzIfmm"> 
+                    <i xid="i2" class="icon-android-note cZzIfmm" __cid="cZzIfmm"/> 
+                  </div> 
+                </div> 
+              </li> 
+            </ul> 
+          </div>  
+          <div class="row cZzIfmm" xid="div1" style="height:40px;" __cid="cZzIfmm"> 
+            <div class="col-sm-3 cZzIfmm" xid="div2" style="height:100%;" __cid="cZzIfmm"> 
+              <div class="x-pagerbar-length cZzIfmm" xid="div3" __cid="cZzIfmm"> 
+                <label component="$model/UI2/system/components/justep/pagerLimitSelect/pagerLimitSelect" class="x-pagerlimitselect cZzIfmm" xid="pagerLimitSelect1" data-bind="component:{name:'$model/UI2/system/components/justep/pagerLimitSelect/pagerLimitSelect'}" data-config="{&quot;defaultValue&quot;:10}" __cid="cZzIfmm"> 
+                  <span xid="span1" __cid="cZzIfmm" class="cZzIfmm">显示</span>  
+                  <select component="$model/UI2/system/components/justep/select/select" class="form-control input-sm cZzIfmm" xid="select1" data-bind="component:{name:'$model/UI2/system/components/justep/select/select'}" __cid="cZzIfmm"> 
+                    <option value="1" xid="default2" __cid="cZzIfmm" class="cZzIfmm">1</option>  
+                    <option value="2" xid="default3" __cid="cZzIfmm" class="cZzIfmm">2</option>  
+                    <option value="5" xid="default4" __cid="cZzIfmm" class="cZzIfmm">5</option>  
+                    <option value="10" xid="default5" __cid="cZzIfmm" class="cZzIfmm">10</option> 
+                  </select>  
+                  <span xid="span3" __cid="cZzIfmm" class="cZzIfmm">条</span> 
+                </label> 
+              </div> 
+            </div>  
+            <div class="col-sm-3 cZzIfmm" xid="div4" style="height:100%;" __cid="cZzIfmm"> 
+              <div class="x-pagerbar-info cZzIfmm" xid="div5" __cid="cZzIfmm">当前显示
+                <span id="offset" __cid="cZzIfmm" class="cZzIfmm"/>条，共
+                <span id="total" __cid="cZzIfmm" class="cZzIfmm"/>条
+              </div> 
+            </div>  
+            <div class="col-sm-6 cZzIfmm" xid="div6" style="height:40px;" __cid="cZzIfmm"> 
+              <div class="x-pagerbar-pagination cZzIfmm" xid="div7" style="height:100%;" __cid="cZzIfmm"> 
+                <ul class="pagination cZzIfmm" component="$model/UI2/system/components/bootstrap/pagination/pagination" xid="pagination1" style="height:100%;" data-bind="component:{name:'$model/UI2/system/components/bootstrap/pagination/pagination'}" __cid="cZzIfmm"> 
+                  <li class="prev cZzIfmm" xid="li1" __cid="cZzIfmm"> 
+                    <a href="#" xid="a1" __cid="cZzIfmm" class="cZzIfmm"> 
+                      <span aria-hidden="true" xid="span4" __cid="cZzIfmm" class="cZzIfmm">«</span>  
+                      <span class="sr-only cZzIfmm" xid="span5" __cid="cZzIfmm">Previous</span> 
+                    </a> 
+                  </li>  
+                  <li class="next cZzIfmm" xid="li2" __cid="cZzIfmm"> 
+                    <a href="#" xid="a2" __cid="cZzIfmm" class="cZzIfmm"> 
+                      <span aria-hidden="true" xid="span6" __cid="cZzIfmm" class="cZzIfmm">»</span>  
+                      <span class="sr-only cZzIfmm" xid="span9" __cid="cZzIfmm">Next</span> 
+                    </a> 
+                  </li> 
+                </ul> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div>  
+      <div class="x-contents-content cZzIfmm" xid="scenicPointContent" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cZzIfmm"> 
+        <div component="$model/UI2/system/components/justep/windowContainer/windowContainer" class="x-window-container cZzIfmm" xid="windowContainer1" __component-context__="block" data-bind="component:{name:'$model/UI2/system/components/justep/windowContainer/windowContainer'}" __cid="cZzIfmm"/> 
+      </div>  
+      <div class="x-contents-content cZzIfmm" xid="delicousContent" component="$model/UI2/system/components/justep/contents/content" data-bind="component:{name:'$model/UI2/system/components/justep/contents/content'}" __cid="cZzIfmm"> 
+        <div component="$model/UI2/system/components/justep/windowContainer/windowContainer" class="x-window-container cZzIfmm" xid="windowContainer2" __component-context__="block" data-bind="component:{name:'$model/UI2/system/components/justep/windowContainer/windowContainer'}" __cid="cZzIfmm"/> 
+      </div> 
+    </div> 
+  </div> 
+</div>

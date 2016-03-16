@@ -1,0 +1,254 @@
+.x-titlebar {
+	background-color: white;
+	color: black;
+	font-weight: 500;
+	line-height: 50px
+}
+
+.x-titlebar-title {
+	font-weight: 400;
+	line-height: 35px
+}
+
+.x-panel-content {
+	background-color: rgb(238, 239, 244);
+}
+
+.x-popOver-content {
+	background-color: rgb(238, 239, 244);
+	width: 90%;
+	height: 70%;
+	margin-top: 5%;
+	margin-left: 5%;
+	width: 90%;
+	margin-left: 5%;
+	border-radius: 13px;
+}
+
+.x-popOver-overlay {
+	background-color: rgb(28, 28, 29);
+}
+
+.popover-head {
+	background-color: rgb(238, 239, 244);
+	height: 8%;
+	padding-left: 5%;
+	font-size: 17px;
+	line-height: 40px;
+	border-top-left-radius: 13px;
+	border-top-right-radius: 13px
+}
+
+.popover-body {
+	background-color: white;
+	height: 84%;
+	padding: 4%;
+	padding-top: 6%
+}
+
+.popover-foot {
+	background-color: rgb(238, 239, 244);
+	height: 8%;
+	text-align: center;
+	font-size: 15px;
+	line-height: 38px;
+	border-bottom-left-radius: 13px;
+	border-bottom-right-radius: 13px
+}
+
+.x-titlebar-left {
+	border-bottom: 2px solid rgb(238, 239, 244);
+}
+
+.x-titlebar-title {
+	border-bottom: 2px solid rgb(238, 239, 244);
+}
+
+.x-titlebar-right {
+	border-bottom: 2px solid rgb(238, 239, 244);
+}
+
+.prompt {
+	margin-top: -5px;
+	width: 96%;
+	height: 5%;
+	margin-left: 2%;
+	background-color: rgb(1, 128, 1);
+	color: white;
+	padding-left: 2%;
+	border-radius: 5px;
+}
+
+.prompt-picture {
+	margin-top: 20px;
+	width: 96%;
+	margin-left: 2%;
+	height: 100%;
+	background: url(../medicine/image/sl.jpg) no-repeat;
+}
+
+.sz {
+	position: relative;
+	width: 50px;
+	height: 50px;
+}
+
+.frame {
+	margin-left: 5%;
+	margin-top: -5px;
+	position: relative;
+	width: 50px;
+	height: 50px;
+	float: left;
+}
+
+.icon-close-circled {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	display: none;
+}
+
+.picture {
+	width: 100%;
+	height: 100px;
+	background-color: white;
+}
+
+.instruction {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 40px;
+	padding-left: 5%;
+}
+
+span {
+	padding: 0;
+	margin: 0;
+	font-size: 9px;
+	color: gray
+}
+
+a {
+	float: right;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 40px;
+	padding-right: 5%;
+	color: rgb(255, 155, 55);
+	text-decoration: underline;
+	font-size: 15px;
+}
+
+.number {
+	margin-top: 20px;
+	background-color: white;
+	width: 100%;
+	height: 40px;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 40px;
+	padding-left: 5%;
+	padding-right: 5%;
+}
+
+.block {
+	background-color: rgb(204, 204, 204);
+	margin-top: 8px;
+	float: right;
+	width: 30px;
+	height: 24px;
+	text-align: center;
+	float: right;
+	line-height: 25px;
+}
+
+.block.n {
+	background-color: white;
+	font-size: 18px;
+	border: 1px solid rgb(204, 204, 204)
+}
+
+.datadiv {
+	margin-top: 20px;
+	background-color: white;
+	width: 100%;
+	height: 202px
+}
+
+.data {
+	width: 100%;
+	height: 40px;
+	padding-left: 5%;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 40px;
+}
+
+.border {
+	width: 90%;
+	height: 1px;
+	margin-left: 5%;
+	background-color: rgb(204, 204, 204);
+}
+
+input {
+	border: 0px;
+	height: 30px;
+	width: 80%;
+}
+
+select {
+	width: 35%;
+	height: 30px;
+	float: right;
+	margin-right: 10%;
+	line-height: 28px;
+	margin-top: 5px;
+}
+
+.attention {
+	width: 100%;
+	height: 130px;
+	background-color: white;
+	margin-top: 5%;
+	padding-left: 5%;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 40px;
+}
+
+textarea {
+	width: 95%;
+	margin-right: 5%;
+	border: 1px solid rgb(204, 204, 204);
+	border-top: 3px solid rgb(204, 204, 204);
+}
+
+.confirm {
+	float: left;
+	width: 90%;
+	margin-left: 5%;
+	background-color: rgb(148, 218, 85);
+	height: 40px;
+	margin-top: 20px;
+	margin-bottom: 70px;
+	border-radius: 5px;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 40px;
+	color: white;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.warning {
+	width: 40%;
+	height: 40px;
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 40px;
+	color: red;
+	margin-left: 20%;
+	display: none
+}
