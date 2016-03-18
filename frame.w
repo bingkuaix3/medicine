@@ -4,27 +4,33 @@
   design="device:pc">  
   <div component="$UI/system/components/justep/model/model" xid="model" style="height:auto;left:358px;top:339px;"
     onLoad="modelLoad"> 
-    <div component="$UI/system/components/justep/data/baasData" autoLoad="true" xid="meddata" saveAction="saveInformation" queryAction="queryInformation" tableName="information" url="/medicine/med_action" idColumn="id"><column label="id" name="id" type="String" xid="default1"></column>
-  <column label="userid" name="userid" type="String" xid="default2"></column>
-  <column label="username" name="username" type="String" xid="default3"></column>
-  <column label="state" name="state" type="String" xid="default4"></column>
-  <column label="picture" name="picture" type="String" xid="default6"></column>
-  <column label="number" name="number" type="Integer" xid="default7"></column>
-  <column label="consignee" name="consignee" type="String" xid="default8"></column>
-  <column label="telephone" name="telephone" type="String" xid="default9"></column>
-  <column label="area" name="area" type="String" xid="default10"></column>
-  <column label="address" name="address" type="String" xid="default11"></column>
-  <column label="remarks" name="remarks" type="String" xid="default12"></column>
-  <column label="medprice" name="medprice" type="Float" xid="default13"></column>
-  <column label="transportprice" name="transportprice" type="Float" xid="default14"></column>
-  <column label="dealnumber" name="dealnumber" type="String" xid="default15"></column>
-  <column label="logisticstelephone" name="logisticstelephone" type="String" xid="default16"></column>
-  <column label="logistics" name="logistics" type="String" xid="default17"></column>
-  <column label="logisticsnumber" name="logisticsnumber" type="String" xid="default18"></column>
-  <column label="dealtime" name="dealtime" type="DateTime" xid="default19"></column>
-  <column label="ordertime" name="ordertime" type="DateTime" xid="default20"></column>
-  <column label="managetime" name="managetime" type="DateTime" xid="default21"></column>
-  <filter name="statee" xid="filter1"><![CDATA[state = :statee]]></filter></div></div>  
+    <div component="$UI/system/components/justep/data/baasData" autoLoad="true"
+      xid="meddata" saveAction="saveInformation" queryAction="queryInformation" tableName="information"
+      url="/medicine/med_action" idColumn="id">
+      <column label="id" name="id" type="String" xid="default1"/>  
+      <column label="userid" name="userid" type="String" xid="default2"/>  
+      <column label="username" name="username" type="String" xid="default3"/>  
+      <column label="state" name="state" type="String" xid="default4"/>  
+      <column label="picture" name="picture" type="String" xid="default6"/>  
+      <column label="number" name="number" type="Integer" xid="default7"/>  
+      <column label="consignee" name="consignee" type="String" xid="default8"/>  
+      <column label="telephone" name="telephone" type="String" xid="default9"/>  
+      <column label="area" name="area" type="String" xid="default10"/>  
+      <column label="address" name="address" type="String" xid="default11"/>  
+      <column label="remarks" name="remarks" type="String" xid="default12"/>  
+      <column label="medprice" name="medprice" type="Float" xid="default13"/>  
+      <column label="transportprice" name="transportprice" type="Float" xid="default14"/>  
+      <column label="dealnumber" name="dealnumber" type="String" xid="default15"/>  
+      <column label="logisticstelephone" name="logisticstelephone" type="String"
+        xid="default16"/>  
+      <column label="logistics" name="logistics" type="String" xid="default17"/>  
+      <column label="logisticsnumber" name="logisticsnumber" type="String" xid="default18"/>  
+      <column label="dealtime" name="dealtime" type="DateTime" xid="default19"/>  
+      <column label="ordertime" name="ordertime" type="DateTime" xid="default20"/>  
+      <column label="managetime" name="managetime" type="DateTime" xid="default21"/>  
+      <filter name="statee" xid="filter1"><![CDATA[state = :statee]]></filter>
+    </div>
+  </div>  
   <div class="head"> 
     <div class="company">碾子科技</div>  
     <div class="serach"> 
@@ -43,7 +49,7 @@
           <img class="portraitimg" src="../medicine/image/loggeduser.png"/>  
           <img class="jt" src="../medicine/image/jt.jpg"/> 
         </div>  
-        <div class="name">さよなら</div>  
+        <div class="name">国安药业</div>  
         <div class="triangle"> 
           <img src="../medicine/image/sj.jpg"/> 
         </div> 
@@ -56,24 +62,6 @@
         <i xid="i7" class="icon-home"/> 
       </div>  
       <span>首页</span> 
-    </div>  
-    <div class="menudiv"> 
-      <div class="i"> 
-        <i xid="i8" class="icon-android-forums"/> 
-      </div>  
-      <span>交流平台</span> 
-    </div>  
-    <div class="menudiv"> 
-      <div class="i"> 
-        <i xid="i8" class="icon-android-contact"/> 
-      </div>  
-      <span>个人信息</span> 
-    </div>  
-    <div class="menudiv"> 
-      <div class="i"> 
-        <i xid="i8" class="icon-clipboard"/> 
-      </div>  
-      <span>订单统计</span> 
     </div>  
     <div class="menudiv" id="extend" bind-click="extend" change="1"> 
       <div class="i"> 
@@ -99,6 +87,24 @@
         <i xid="i19" class="icon-arrow-right-b"/>  
         <span>已完成订单</span> 
       </div> 
+    </div>  
+    <div class="menudiv"> 
+      <div class="i"> 
+        <i xid="i8" class="icon-android-forums"/> 
+      </div>  
+      <span>交流平台</span> 
+    </div>  
+    <div class="menudiv"> 
+      <div class="i"> 
+        <i xid="i8" class="icon-android-contact"/> 
+      </div>  
+      <span>个人信息</span> 
+    </div>  
+    <div class="menudiv"> 
+      <div class="i"> 
+        <i xid="i8" class="icon-clipboard"/> 
+      </div>  
+      <span>订单统计</span> 
     </div>  
     <div class="menudiv"> 
       <div class="i"> 
@@ -154,7 +160,7 @@
     </div> 
   </div>  
   <div class="main"> 
-    <div class="table"> 
+    <div class="xxxxx"> 
       <div class="tabletitlediv"> 
         <div class="tabletitle number">剂数</div>  
         <div class="tabletitle consignee">收货人</div>  
@@ -195,45 +201,45 @@
             </div> 
           </li> 
         </ul> 
-      </div> 
-    </div>  
-    <div class="page"> 
-      <div component="$UI/system/components/justep/pagerBar/pagerBar" class="x-pagerbar container-fluid"
-        xid="pagerBar2" data="meddata"> 
-        <div class="row" xid="div8"> 
-          <div class="col-sm-3" xid="div9"> 
-            <div class="x-pagerbar-length" xid="div10"> 
-              <label component="$UI/system/components/justep/pagerLimitSelect/pagerLimitSelect"
-                class="x-pagerlimitselect" xid="pagerLimitSelect2" defaultValue="10"> 
-                <span xid="span7">显示</span>  
-                <select component="$UI/system/components/justep/select/select"
-                  class="form-control input-sm" xid="select2"> 
-                  <option value="10" xid="default5">10</option> 
-                </select>  
-                <span xid="span8">条</span> 
-              </label> 
-            </div> 
-          </div>  
-          <div class="col-sm-3" xid="div11"> 
-            <div class="x-pagerbar-info" xid="div12">当前显示0条，共0条</div> 
-          </div>  
-          <div class="col-sm-6" xid="div13"> 
-            <div class="x-pagerbar-pagination" xid="div14"> 
-              <ul class="pagination" component="$UI/system/components/bootstrap/pagination/pagination"
-                xid="pagination2"> 
-                <li class="prev" xid="li3"> 
-                  <a href="#" xid="a3"> 
-                    <span aria-hidden="true" xid="span9">«</span>  
-                    <span class="sr-only" xid="span10">Previous</span> 
-                  </a> 
-                </li>  
-                <li class="next" xid="li4"> 
-                  <a href="#" xid="a4"> 
-                    <span aria-hidden="true" xid="span11">»</span>  
-                    <span class="sr-only" xid="span12">Next</span> 
-                  </a> 
-                </li> 
-              </ul> 
+      </div>  
+      <div class="page"> 
+        <div component="$UI/system/components/justep/pagerBar/pagerBar" class="x-pagerbar container-fluid"
+          xid="pagerBar2" data="meddata"> 
+          <div class="row" xid="div8"> 
+            <div class="col-sm-3" xid="div9"> 
+              <div class="x-pagerbar-length" xid="div10"> 
+                <label component="$UI/system/components/justep/pagerLimitSelect/pagerLimitSelect"
+                  class="x-pagerlimitselect" xid="pagerLimitSelect2" defaultValue="10"> 
+                  <span xid="span7">显示</span>  
+                  <select component="$UI/system/components/justep/select/select"
+                    class="form-control input-sm" xid="select2"> 
+                    <option value="10" xid="default5">10</option> 
+                  </select>  
+                  <span xid="span8">条</span> 
+                </label> 
+              </div> 
+            </div>  
+            <div class="col-sm-3" xid="div11"> 
+              <div class="x-pagerbar-info" xid="div12">当前显示0条，共0条</div> 
+            </div>  
+            <div class="col-sm-6" xid="div13"> 
+              <div class="x-pagerbar-pagination" xid="div14"> 
+                <ul class="pagination" component="$UI/system/components/bootstrap/pagination/pagination"
+                  xid="pagination2"> 
+                  <li class="prev" xid="li3"> 
+                    <a href="#" xid="a3"> 
+                      <span aria-hidden="true" xid="span9">«</span>  
+                      <span class="sr-only" xid="span10">Previous</span> 
+                    </a> 
+                  </li>  
+                  <li class="next" xid="li4"> 
+                    <a href="#" xid="a4"> 
+                      <span aria-hidden="true" xid="span11">»</span>  
+                      <span class="sr-only" xid="span12">Next</span> 
+                    </a> 
+                  </li> 
+                </ul> 
+              </div> 
             </div> 
           </div> 
         </div> 

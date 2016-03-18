@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<html xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%" class="no-js">  
+  <head xmlns=""> 
+    <meta charset="utf-8"/>  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>  
+    <meta name="apple-mobile-web-app-capable" content="yes"/>  
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>  
+    <meta name="format-detection" content="telephone=no"/>  
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>  
+    <script src="../../v_9d44575e4af2467bb6983dfe4e67b23el_zh_CNs_d_/system/lib/base/modernizr-2.8.3.min.js"/>  
+    <script id="__updateVersoin">
+        
+        	(function(url, mode){
+        		if ((mode!=="1" &amp;&amp; (mode!="2") &amp;&amp; (mode!="3"))) return;
+				var async = (mode=="1");
+        		var x5Version = "noApp";
+        		var x5AppAgents = /x5app\/([0-9.]*)/.exec(navigator.userAgent);
+        		if(x5AppAgents &amp;&amp; x5AppAgents.length &gt; 1){
+        		   	x5Version = x5AppAgents[1] || "";
+        		}else{
+        			async = false;
+        		} 
+        		function createXhr(){
+    				try {	
+    					return new XMLHttpRequest();
+    				}catch (tryMS) {	
+    					var version = ["MSXML2.XMLHttp.6.0",
+    					               "MSXML2.XMLHttp.3.0",
+    					               "MSXML2.XMLHttp",
+    					               "Miscrosoft.XMLHTTP"];
+    					for(var i = 0; i &lt; version.length; i++){
+    						try{
+    					    	return new ActiveXObject(version[i]);
+    						}catch(e){}
+    					}
+    				}
+    				throw new Error("您的系统或浏览器不支持XHR对象！");
+        		}
+        		
+				function createGuid(){	
+					var guid = '';	
+					for (var i = 1; i &lt;= 32; i++){		
+						var n = Math.floor(Math.random()*16.0).toString(16);		
+						guid += n;		
+						if((i==8)||(i==12)||(i==16)||(i==20))			
+							guid += '-';	
+					}	
+					return guid;
+				}
+				
+				function getBaseUrl(){
+					var items = window.location.href.split("/");
+					var newItems = [];
+					for (var i=0; i&lt;items.length; i++){
+						if (mode == "3"){
+    						if (items[i] &amp;&amp; (items[i].indexOf("v_") === 0) 
+    								&amp;&amp; (items[i].indexOf("l_") !== -1)
+    								&amp;&amp; (items[i].indexOf("s_") !== -1)
+    								&amp;&amp; (items[i].indexOf("d_") !== -1)
+    								|| (items[i]=="v_")){
+    							break;
+    						}
+						}else{
+							if (items[i] &amp;&amp; (items[i].indexOf("v-")===0) &amp;&amp; (items[i].charAt(items[i].length-1)=="-") ){
+								break;
+							}
+						}
+						newItems.push(items[i]);
+					}
+					var base = newItems.join("/");
+					if (base.charAt(base.length-1)!="/") base += "/";
+					return base;
+				}
+				
+				function prepareUrl(base, curURL){
+					return base + curURL;
+				}
+				
+				function updateIndexPage(newUrl){
+					try{
+						var keyPrefix = "indexPage_";
+						if (window.localStorage){
+							nativePref = window.localStorage.getItem("cordova_native_pref");
+							try{
+								nativePref = JSON.parse(nativePref);
+							}catch(e4){
+								nativePref = null;
+							}
+							if (nativePref &amp;&amp; (toString.call(nativePref) === '[object Object]')){
+								for (var p in nativePref){
+									if (nativePref.hasOwnProperty(p) &amp;&amp; ((p+"").indexOf(keyPrefix)==0)){
+										delete nativePref[p];
+									}
+								}
+								nativePref[keyPrefix + x5Version] = newUrl;
+							}else{
+								nativePref = {};
+								nativePref[keyPrefix + x5Version] = newUrl;
+							}
+							nativePref = JSON.stringify(nativePref);
+							window.localStorage.setItem("cordova_native_pref", nativePref);
+						}
+					}catch(e5){}
+				}
+				
+				
+        		var base = getBaseUrl();
+				var xhr = createXhr();
+				url += ((url.indexOf("?")!=-1) ? "&amp;" : "?") +"_=" + createGuid();
+				xhr.open('GET', base + url, async);
+				
+				if (async){
+					xhr.onreadystatechange=function(){
+						if((xhr.readyState == 4) &amp;&amp; (xhr.status == 200) &amp;&amp; xhr.responseText){
+							var indexUrl = prepareUrl(base, xhr.responseText);
+							updateIndexPage(indexUrl);
+						}
+					}	
+				}
+				
+				try{
+					xhr.send(null);
+					if (!async &amp;&amp; (xhr.status == 200) &amp;&amp; xhr.responseText){
+						var indexUrl = xhr.responseText;
+						if (indexUrl.indexOf("#")!=-1) indexUrl = indexUrl.substr(0, indexUrl.indexOf("#"));
+						if (indexUrl.indexOf("?")!=-1) indexUrl = indexUrl.substr(0, indexUrl.indexOf("?"));
+						if (window.location.pathname.indexOf(indexUrl) == -1){
+							indexUrl = prepareUrl(base, indexUrl);
+							if (mode == '2') updateIndexPage(indexUrl);
+							window.location.href = indexUrl;
+						}
+					}
+				}catch(e2){}
+        	}("@versionUrl@", "@mode@"));
+                 
+        </script>  
+    <link rel="stylesheet" href="../../v_7e95df9a5ca64fbab2ff6fb945f9d000l_zh_CNs_d_/system/components/bootstrap.min.css" include="$model/UI2/system/components/bootstrap/lib/css/bootstrap,$model/UI2/system/components/bootstrap/lib/css/bootstrap-theme"/>
+    <link rel="stylesheet" href="../../v_12ade63e26944068a710f4e0dae592cel_zh_CNs_d_/system/components/comp.min.css" include="$model/UI2/system/components/justep/row/css/row,$model/UI2/system/components/justep/attachment/css/attachment,$model/UI2/system/components/justep/barcode/css/barcodeImage,$model/UI2/system/components/justep/panel/css/panel,$model/UI2/system/components/justep/common/css/scrollable,$model/UI2/system/components/justep/scrollView/css/scrollView,$model/UI2/system/components/justep/input/css/datePickerPC,$model/UI2/system/components/justep/contents/css/contents,$model/UI2/system/components/justep/popMenu/css/popMenu,$model/UI2/system/components/justep/lib/css/icons,$model/UI2/system/components/justep/titleBar/css/titleBar,$model/UI2/system/components/justep/dataTables/css/dataTables,$model/UI2/system/components/justep/dialog/css/dialog,$model/UI2/system/components/justep/messageDialog/css/messageDialog,$model/UI2/system/components/justep/toolBar/css/toolBar,$model/UI2/system/components/justep/popOver/css/popOver,$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/input/css/datePicker,$model/UI2/system/components/justep/dataTables/css/dataTables,$model/UI2/system/components/justep/wing/css/wing,$model/UI2/system/components/bootstrap/scrollSpy/css/scrollSpy,$model/UI2/system/components/justep/menu/css/menu,$model/UI2/system/components/justep/numberSelect/css/numberList,$model/UI2/system/components/justep/list/css/list,$model/UI2/system/components/bootstrap/carousel/css/carousel,$model/UI2/system/components/bootstrap/dropdown/css/dropdown,$model/UI2/system/components/justep/common/css/forms,$model/UI2/system/components/justep/bar/css/bar"/>
+  </head>  
+  <body xmlns="" style="width:100%;height:100%;margin: 0;"> 
+    <script intro="none"/>  
+    <script>
+    	
+    	    window.__justep = window.__justep || {};
+		 
+    	</script>  
+    <div id="applicationHost" class="applicationHost" style="width:100%;height:100%;" __component-context__="block">
+      <div xid="window" class="window cZN7vai" component="$model/UI2/system/components/justep/window/window" design="device:pc" data-bind="component:{name:'$model/UI2/system/components/justep/window/window'}" __cid="cZN7vai" components="$model/UI2/system/components/justep/loadingBar/loadingBar,$model/UI2/system/components/justep/model/model,$model/UI2/system/components/justep/window/window,$model/UI2/system/components/justep/data/baasData,">  
+        <style xmlns:xhtml="http://www.w3.org/1999/xhtml">.head.cZN7vai{width: 100%; border: 1px solid rgb(238, 238, 238); height: 7.5%} .company.cZN7vai{float: left; width: 17%; height: 100%; border: 1px solid rgb(238, 238, 238); border-bottom: 0px solid rgb(238, 238, 238); font-size: 25px; font-weight: 600; line-height: 50px; padding-left: 20px; letter-spacing: 1px} .serach.cZN7vai{float: left; width: 17%; height: 100%; border: 1px solid rgb(238, 238, 238); border-left: 0px solid rgb(238, 238, 238); width: 17%; border-bottom: 0px solid rgb(238, 238, 238)} .serach.cZN7vai input.cZN7vai{float: left; border: 0px; height: 34px; font-size: 20px; letter-spacing: 2px; font-size: 10px; height: 30px; margin-top: 8px; margin-left: 20px} input.cZN7vai:focus{outline: none} .icon.cZN7vai{float: right; width: 40px; height: 40px; background: url(../../v_7c3be727abf546b8b4da51b640a029d5l_zh_CNs_d_/medicine/image/search.jpg) no-repeat scroll right center transparent} .portraitdiv.cZN7vai{width: 220px; height: 100%; float: right} .portraitdiv.cZN7vai div.cZN7vai:hover{background: rgb(249, 249, 249); cursor: pointer} .email.cZN7vai{float: left; width: 45px; height: 100%; border-left: 1px solid rgb(238, 238, 238); padding-left: 15px; padding-top: 14px} .notice.cZN7vai{float: left; width: 45px; height: 100%; border-left: 1px solid rgb(238, 238, 238); padding-left: 15px; padding-top: 14px} .portrait.cZN7vai{float: left; height: 100%; width: 130px; border-left: 1px solid rgb(238, 238, 238); padding-left: 8px; padding-top: 12px} .name.cZN7vai{float: left; width: 70px; padding-left: 10px; padding-top: 2px} .portraitimg.cZN7vai{float: left; width: 25px; height: 25px; border-radius: 20px} .triangle.cZN7vai{float: left; width: 20px; height: 100%; padding-left: 5px; padding-top: 2px} .over.cZN7vai{display: none} .over-body.cZN7vai{position: absolute; z-index: 100; width: 100%; height: 100%; background-color: transpartent; top: 0px} .jt.cZN7vai{position: absolute; right: 90px; top: 42px; display: none} .over-content.cZN7vai{position: absolute; z-index: 101; width: 150px; height: 137px; background-color: rgb(29, 41, 57); right: 25px; padding: 5px} .assortment.cZN7vai{width: 100%; height: 32px; border-radius: 2px; font-size: 13px; color: rgb(143, 147, 158); line-height: 32px; padding-left: 15px; letter-spacing: 2px} .assortment.cZN7vai:hover{background: rgb(28, 175, 154); cursor: pointer; color: white} .menu.cZN7vai span.cZN7vai{padding-left: 10px} .menu.cZN7vai{float: left; width: 17%; height: 92.5%; background: rgb(29, 41, 57); padding: 15px} .menudiv.cZN7vai{width: 200px; height: 35px; border-radius: 2px; font-size: 15px; font-weight: 500; line-height: 35px; padding-left: 15px; margin-top: 2px; color: rgb(143, 147, 158)} .menudiv.cZN7vai:hover{background: white; cursor: pointer; color: rgb(29, 41, 57)} .i.cZN7vai{float: left; width: 20px; height: 35px} .p.cZN7vai{float: left; width: 10px; height: 30px} .icon-android-add.cZN7vai{font-size: 9px; margin-left: 70px} .icon-android-remove.cZN7vai{font-size: 9px; margin-left: 70px} .submenu.cZN7vai{width: 100%; height: 130px; padding: 5px; margin-top: 5px} .submenudiv.cZN7vai{width: 100%; height: 32px; color: rgb(143, 147, 158); font-size: 11px; padding-left: 22px} #wcl.cZN7vai{color: rgb(28, 175, 154)} .submenudiv.cZN7vai:hover{cursor: pointer; color: rgb(28, 175, 154)} #extend.cZN7vai{background: rgb(28, 175, 154); color: white} .title.cZN7vai{float: left; width: 83%; height: 10%; background: rgb(247, 247, 247); border-bottom: 1px solid rgb(211, 215, 219); letter-spacing: 2px} .title.cZN7vai span.cZN7vai{float: left; margin-top: 17px; margin-right: 17px} .titleword.cZN7vai{width: 240px; font-size: 25px} #tieleicon.cZN7vai{float: left; font-size: 45px; margin-left: 20px; margin-top: 10px} .titlesubword.cZN7vai{float: left; font-size: 10px; color: rgb(143, 147, 158); margin-top: 30px} .loca.cZN7vai{height: 100%; float: right; font-size: 10px; padding-right: 20px; padding-top: 30px} .loca.cZN7vai span.cZN7vai{float: left; margin-right: 0px; margin-top: 0px} .loca.cZN7vai:first-child{color: rgb(143, 147, 158)} .gray.cZN7vai{color: rgb(171, 171, 171)} .blue.cZN7vai{color: rgb(66, 139, 202)} .black.cZN7vai{color: rgb(51, 51, 51)} .main.cZN7vai{float: left; width: 83%; background: rgb(228, 231, 234)} .table.cZN7vai{float: left; width: 96%; margin-left: 2%; margin-top: 2%; background: white; border-radius: 3px; line-height: 40px; color: rgb(128, 136, 147); padding: 0.5%} .order.cZN7vai{width: 100%} .logistics.cZN7vai{width: 100%; height: 20%} .image.cZN7vai{float: left; width: 65%} .image.cZN7vai img.cZN7vai{width: 100%} .info.cZN7vai{float: left; width: 35%; height: 100%} .infotitle.cZN7vai{width: 100%; height: 15%; font-size: 25px; padding-left: 5%; line-height: 60px; color: black; letter-spacing: 2px} .con.cZN7vai{width: 90%; height: 14%; margin-left: 5%; font-size: 15px; line-height: 55px; border-bottom: 1px solid rgb(238, 238, 238)} .address.cZN7vai{width: 90%; height: 14%; margin-left: 5%; font-size: 15px; border-bottom: 1px solid rgb(238, 238, 238); line-height: 20px; padding-top: 10px} .remarks.cZN7vai{width: 90%; height: 14%; margin-left: 5%; font-size: 15px; line-height: 20px; padding-top: 10px} .th.cZN7vai{letter-spacing: 5px} .logisticsinfo.cZN7vai{float: left; height: 100%; width: 65%} .buttom.cZN7vai{float: left; width: 200px; height: 50px; background: rgb(28, 175, 154); font-size: 20px; color: white; line-height: 50px; letter-spacing: 20px; padding-left: 6.5%; border-radius: 5px; margin-left: 8%; margin-top: 3%} .buttom.cZN7vai:hover{background: rgb(23, 160, 140); cursor: pointer} .logisticsinfoa.cZN7vai{width: 100%; height: 50%} .logisticsinfoa.cZN7vai div.cZN7vai{float: left; width: 50%; heigth: 100%; padding-left: 5%; line-height: 50px; color: black} .logisticsinfoa.cZN7vai input.cZN7vai{width: 200px; height: 50px; border: 0px} .logisticsinfob.cZN7vai input.cZN7vai{width: 400px; height: 50px; border: 0px} .logisticsinfob.cZN7vai{padding-left: 5%; line-height: 50px; color: black}</style>  
+        <div component="$model/UI2/system/components/justep/model/model" xid="model" style="display:none" data-bind="component:{name:'$model/UI2/system/components/justep/model/model'}" data-events="onLoad:modelLoad" __cid="cZN7vai" class="cZN7vai"/>  
+        <div class="head cZN7vai" __cid="cZN7vai"> 
+          <div class="company cZN7vai" __cid="cZN7vai">碾子科技</div>  
+          <div class="serach cZN7vai" __cid="cZN7vai"> 
+            <input type="text" placeholder="搜索..." __cid="cZN7vai" class="cZN7vai"/>  
+            <div class="icon cZN7vai" __cid="cZN7vai"/> 
+          </div>  
+          <div class="portraitdiv cZN7vai" __cid="cZN7vai"> 
+            <div class="email cZN7vai" __cid="cZN7vai"> 
+              <i xid="i1" class="icon-android-social-user cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <div class="notice cZN7vai" __cid="cZN7vai"> 
+              <i xid="i2" class="icon-android-mail cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <div class="portrait cZN7vai" __cid="cZN7vai" data-bind="event:{click:$model._callModelFn.bind($model, 'menu')}"> 
+              <div class="img cZN7vai" __cid="cZN7vai"> 
+                <img class="portraitimg cZN7vai" src="../../v_eedb95505b1b456297b08062e7df4137l_zh_CNs_d_/medicine/image/loggeduser.png" __cid="cZN7vai"/>  
+                <img class="jt cZN7vai" src="../../v_23afee78ca4540bc81ffa36ef478f89fl_zh_CNs_d_/medicine/image/jt.jpg" __cid="cZN7vai"/> 
+              </div>  
+              <div class="name cZN7vai" __cid="cZN7vai">さよなら</div>  
+              <div class="triangle cZN7vai" __cid="cZN7vai"> 
+                <img src="../../v_c37fbea8f5324384b0b4f5d769bf94d1l_zh_CNs_d_/medicine/image/sj.jpg" __cid="cZN7vai" class="cZN7vai"/> 
+              </div> 
+            </div> 
+          </div> 
+        </div>  
+        <div class="menu cZN7vai" __cid="cZN7vai"> 
+          <div class="menudiv cZN7vai" __cid="cZN7vai"> 
+            <div class="i cZN7vai" __cid="cZN7vai"> 
+              <i xid="i7" class="icon-home cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <span __cid="cZN7vai" class="cZN7vai">首页</span> 
+          </div>  
+          <div class="menudiv cZN7vai" __cid="cZN7vai"> 
+            <div class="i cZN7vai" __cid="cZN7vai"> 
+              <i xid="i8" class="icon-android-forums cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <span __cid="cZN7vai" class="cZN7vai">交流平台</span> 
+          </div>  
+          <div class="menudiv cZN7vai" __cid="cZN7vai"> 
+            <div class="i cZN7vai" __cid="cZN7vai"> 
+              <i xid="i8" class="icon-android-contact cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <span __cid="cZN7vai" class="cZN7vai">个人信息</span> 
+          </div>  
+          <div class="menudiv cZN7vai" __cid="cZN7vai"> 
+            <div class="i cZN7vai" __cid="cZN7vai"> 
+              <i xid="i8" class="icon-clipboard cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <span __cid="cZN7vai" class="cZN7vai">订单统计</span> 
+          </div>  
+          <div class="menudiv cZN7vai" id="extend" change="1" __cid="cZN7vai" data-bind="event:{click:$model._callModelFn.bind($model, 'extend')}"> 
+            <div class="i cZN7vai" __cid="cZN7vai"> 
+              <i xid="i8" class="icon-compose cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <span __cid="cZN7vai" class="cZN7vai">订单操作</span>  
+            <i xid="i18" id="add" class="icon-android-remove cZN7vai" __cid="cZN7vai"/> 
+          </div>  
+          <div class="submenu cZN7vai" __cid="cZN7vai"> 
+            <div class="submenudiv cZN7vai" __cid="cZN7vai"> 
+              <i xid="i19" class="icon-arrow-right-b cZN7vai" __cid="cZN7vai"/>  
+              <span __cid="cZN7vai" class="cZN7vai">未处理订单</span> 
+            </div>  
+            <div class="submenudiv cZN7vai" __cid="cZN7vai"> 
+              <i xid="i19" class="icon-arrow-right-b cZN7vai" __cid="cZN7vai"/>  
+              <span __cid="cZN7vai" class="cZN7vai">已处理订单</span> 
+            </div>  
+            <div class="submenudiv cZN7vai" id="wcl" __cid="cZN7vai"> 
+              <i xid="i19" class="icon-arrow-right-b cZN7vai" __cid="cZN7vai"/>  
+              <span __cid="cZN7vai" class="cZN7vai">已付款订单</span> 
+            </div>  
+            <div class="submenudiv cZN7vai" __cid="cZN7vai"> 
+              <i xid="i19" class="icon-arrow-right-b cZN7vai" __cid="cZN7vai"/>  
+              <span __cid="cZN7vai" class="cZN7vai">已完成订单</span> 
+            </div> 
+          </div>  
+          <div class="menudiv cZN7vai" __cid="cZN7vai"> 
+            <div class="i cZN7vai" __cid="cZN7vai"> 
+              <i xid="i8" class="icon-android-earth cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <span __cid="cZN7vai" class="cZN7vai">物流跟踪</span> 
+          </div>  
+          <div class="menudiv cZN7vai" __cid="cZN7vai"> 
+            <div class="i cZN7vai" __cid="cZN7vai"> 
+              <i xid="i8" class="icon-ios7-copy cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <span __cid="cZN7vai" class="cZN7vai">账单统计</span> 
+          </div>  
+          <div class="menudiv cZN7vai" __cid="cZN7vai"> 
+            <div class="i cZN7vai" __cid="cZN7vai"> 
+              <i xid="i8" class="icon-stats-bars cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <span __cid="cZN7vai" class="cZN7vai">可视化管理</span> 
+          </div>  
+          <div class="menudiv cZN7vai" __cid="cZN7vai"> 
+            <div class="i cZN7vai" __cid="cZN7vai"> 
+              <i xid="i8" class="icon-android-call cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <span __cid="cZN7vai" class="cZN7vai">沟通反馈</span> 
+          </div>  
+          <div class="menudiv cZN7vai" __cid="cZN7vai"> 
+            <div class="i cZN7vai" __cid="cZN7vai"> 
+              <i xid="i8" class="icon-android-book cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <span __cid="cZN7vai" class="cZN7vai">系统使用手册</span> 
+          </div>  
+          <div class="menudiv cZN7vai" __cid="cZN7vai"> 
+            <div class="i cZN7vai" __cid="cZN7vai"> 
+              <i xid="i8" class="icon-card cZN7vai" __cid="cZN7vai"/> 
+            </div>  
+            <span __cid="cZN7vai" class="cZN7vai">付费</span> 
+          </div> 
+        </div>  
+        <div class="title cZN7vai" __cid="cZN7vai"> 
+          <div class="titleword cZN7vai" __cid="cZN7vai"> 
+            <i xid="i8" id="tieleicon" class="icon-compose cZN7vai" __cid="cZN7vai"/>  
+            <span __cid="cZN7vai" class="cZN7vai">订单操作</span> 
+          </div>  
+          <div class="titlesubword cZN7vai" __cid="cZN7vai"> 
+            <img src="../../v_c6fc11c2b1234cef82292ddd4c27f2a5l_zh_CNs_d_/medicine/image/xg.jpg" __cid="cZN7vai" class="cZN7vai"/>进行订单的处理、发送订单信息
+          </div>  
+          <div class="loca cZN7vai" __cid="cZN7vai"> 
+            <span class="gray cZN7vai" __cid="cZN7vai">您所在的位置：</span>  
+            <span class="blue cZN7vai" __cid="cZN7vai">订单操作</span>  
+            <span class="black cZN7vai" __cid="cZN7vai"> 
+              <img src="../../v_5f636c00d345441b8c435aa96302eca0l_zh_CNs_d_/medicine/image/xg.jpg" __cid="cZN7vai" class="cZN7vai"/>已付款订单
+            </span> 
+          </div> 
+        </div>  
+        <div class="main cZN7vai" __cid="cZN7vai"> 
+          <div class="table cZN7vai" __cid="cZN7vai"> 
+            <div class="order cZN7vai" __cid="cZN7vai"> 
+              <div class="image cZN7vai" __cid="cZN7vai"> 
+                <img __cid="cZN7vai" class="cZN7vai"/> 
+              </div>  
+              <div class="info cZN7vai" __cid="cZN7vai"> 
+                <div class="infotitle cZN7vai" __cid="cZN7vai">订单信息</div>  
+                <div class="con consignee cZN7vai" __cid="cZN7vai"> 
+                  <span class="th cZN7vai" __cid="cZN7vai">收货人:</span>  
+                  <span id="conconsignee" __cid="cZN7vai" class="cZN7vai"/> 
+                </div>  
+                <div class="con telephone cZN7vai" __cid="cZN7vai">联系电话:
+                  <span __cid="cZN7vai" class="cZN7vai"/> 
+                </div>  
+                <div class="con dealtime cZN7vai" __cid="cZN7vai">付款时间:
+                  <span __cid="cZN7vai" class="cZN7vai"/> 
+                </div>  
+                <div class="con money cZN7vai" __cid="cZN7vai"> 
+                  <span class="th cZN7vai" __cid="cZN7vai">总金额:</span>  
+                  <span id="conmoney" __cid="cZN7vai" class="cZN7vai"/> 
+                </div>  
+                <div class="address cZN7vai" __cid="cZN7vai">详细地址:
+                  <span __cid="cZN7vai" class="cZN7vai"/> 
+                </div>  
+                <div class="remarks cZN7vai" __cid="cZN7vai">注意事项:
+                  <span __cid="cZN7vai" class="cZN7vai"/> 
+                </div> 
+              </div> 
+            </div>  
+            <div class="logistics cZN7vai" __cid="cZN7vai"> 
+              <div class="logisticsinfo cZN7vai" __cid="cZN7vai"> 
+                <div class="logisticsinfoa cZN7vai" __cid="cZN7vai"> 
+                  <div __cid="cZN7vai" class="cZN7vai">物流公司:
+                    <input id="a" placeholder="请输入公司名称..." __cid="cZN7vai" class="cZN7vai"/> 
+                  </div>  
+                  <div __cid="cZN7vai" class="cZN7vai">联系电话:
+                    <input id="b" placeholder="请输入公司电话..." __cid="cZN7vai" class="cZN7vai"/> 
+                  </div> 
+                </div>  
+                <div class="logisticsinfob cZN7vai" __cid="cZN7vai">订单编号:
+                  <input id="c" placeholder="请输入物流单号..." __cid="cZN7vai" class="cZN7vai"/> 
+                </div> 
+              </div>  
+              <div class="buttom cZN7vai" __cid="cZN7vai" data-bind="event:{click:$model._callModelFn.bind($model, 'div1Click')}">发送</div> 
+            </div> 
+          </div> 
+        </div>  
+        <div class="over cZN7vai" __cid="cZN7vai"> 
+          <div class="over-body cZN7vai" __cid="cZN7vai" data-bind="event:{click:$model._callModelFn.bind($model, 'hide')}"/>  
+          <div class="over-content cZN7vai" __cid="cZN7vai"> 
+            <div class="assortment cZN7vai" __cid="cZN7vai"> 
+              <div class="p cZN7vai" __cid="cZN7vai"> 
+                <i xid="i3" class="icon-person cZN7vai" __cid="cZN7vai"/> 
+              </div>  
+              <span __cid="cZN7vai" class="cZN7vai">个人简介</span> 
+            </div>  
+            <div class="assortment cZN7vai" __cid="cZN7vai"> 
+              <div class="p cZN7vai" __cid="cZN7vai"> 
+                <i xid="i4" class="icon-ios7-gear cZN7vai" __cid="cZN7vai"/> 
+              </div>  
+              <span __cid="cZN7vai" class="cZN7vai">账户设置</span> 
+            </div>  
+            <div class="assortment cZN7vai" __cid="cZN7vai"> 
+              <div class="p cZN7vai" __cid="cZN7vai"> 
+                <i xid="i5" class="icon-help-circled cZN7vai" __cid="cZN7vai"/> 
+              </div>  
+              <span __cid="cZN7vai" class="cZN7vai">帮助</span> 
+            </div>  
+            <div class="assortment cZN7vai" __cid="cZN7vai"> 
+              <div class="p cZN7vai" __cid="cZN7vai"> 
+                <i xid="i6" class="icon-log-out cZN7vai" __cid="cZN7vai"/> 
+              </div>  
+              <span __cid="cZN7vai" class="cZN7vai">退出</span> 
+            </div> 
+          </div> 
+        </div> 
+      </div>
+    </div>  
+    <div id="downloadGCF" style="display:none;padding:50px;"> 
+      <span>您使用的浏览器需要下载插件才能使用,</span>  
+      <a id="downloadGCFLink" href="#">下载地址</a>  
+      <p>(安装后请重新打开浏览器)</p> 
+    </div>  
+    <script>
+    	
+    	            //判断浏览器, 判断GCF
+    	 			var browser = {
+    			        isIe: function () {
+    			            return navigator.appVersion.indexOf("MSIE") != -1;
+    			        },
+    			        navigator: navigator.appVersion,
+    			        getVersion: function() {
+    			            var version = 999; // we assume a sane browser
+    			            if (navigator.appVersion.indexOf("MSIE") != -1)
+    			                // bah, IE again, lets downgrade version number
+    			                version = parseFloat(navigator.appVersion.split("MSIE")[1]);
+    			            return version;
+    			        }
+    			    };
+    				function isGCFInstalled(){
+    			      try{
+    			        var i = new ActiveXObject('ChromeTab.ChromeFrame');
+    			        if (i) {
+    			          return true;
+    			        }
+    			      }catch(e){}
+    			      return false;
+    				}
+    	            //判断浏览器, 判断GCF
+    	            var __continueRun = true;
+    				if (browser.isIe() &amp;&amp; (browser.getVersion() &lt; 10) &amp;&amp; !isGCFInstalled()) {
+    					document.getElementById("applicationHost").style.display = 'none';
+    					document.getElementById("downloadGCF").style.display = 'block';
+    					var downloadLink = "/" + location.pathname.match(/[^\/]+/)[0] + "/v8.msi";
+    					document.getElementById("downloadGCFLink").href = downloadLink; 
+    					__continueRun = false;
+    	            }
+		 	
+    	</script>  
+    <script id="_metaJS" src="../../v_1275cc20abe546e8a351ba9c18bd5723l_zh_CNs_d_/system/config/meta.js"> </script>  
+    <script id="_requireJS" src="../../v_33ec581f23324b37b1645ce37aefdfdfl_zh_CNs_d_/system/lib/require/require.2.1.10.js"> </script>  
+    <script xmlns:xhtml="http://www.w3.org/1999/xhtml" src="../../v_d69a9069eedf459cba252863313f1109l_zh_CNs_d_/system/core.min.js"></script>
+    <script xmlns:xhtml="http://www.w3.org/1999/xhtml" src="../../v_07e1c92b134e4aabb6892307e830bc1fl_zh_CNs_d_/system/common.min.js"></script>
+    <script xmlns:xhtml="http://www.w3.org/1999/xhtml" src="../../v_5d2ac25d29024e4c9b0804913daa10d3l_zh_CNs_d_/system/components/comp.min.js"></script>
+    <script id="_mainScript">
+        
+			if (__continueRun) {
+                window.__justep.isDebug = true;     
+                
+                window.__justep.cssReady = function(fn){
+                	var promises = [];
+                	for (var p in window.__justep.__ResourceEngine.__loadingCss){
+                		if(window.__justep.__ResourceEngine.__loadingCss.hasOwnProperty(p))
+                			promises.push(window.__justep.__ResourceEngine.__loadingCss[p].promise());
+                	}
+                	$.when.apply($, promises).done(fn);
+                };
+                
+            	window.__justep.__ResourceEngine = {
+            		readyRegExp : navigator.platform === 'PLAYSTATION 3' ? /^complete$/ : /^(complete|loaded)$/,
+            		url: window.location.href,	
+            		/*contextPath: 不包括语言 */
+            		contextPath: "",
+            		serverPath: "",
+            		__loadedJS: [],
+            		__loadingCss: {},
+            		onLoadCss: function(url, node){
+            			if (!this.__loadingCss[url]){
+            				this.__loadingCss[url] = $.Deferred();	
+                			if (node.attachEvent &amp;&amp;
+                                    !(node.attachEvent.toString &amp;&amp; node.attachEvent.toString().indexOf('[native code') &lt; 0) &amp;&amp;
+                                    !(typeof opera !== 'undefined' &amp;&amp; opera.toString() === '[object Opera]')) {
+                                node.attachEvent('onreadystatechange', this.onLinkLoad.bind(this));
+                            } else {
+                                node.addEventListener('load', this.onLinkLoad.bind(this), false);
+                                node.addEventListener('error', this.onLinkError.bind(this), false);
+                            }
+            			}
+            		},
+            		
+            		onLinkLoad: function(evt){
+            	        var target = (evt.currentTarget || evt.srcElement);
+            	        if (evt.type === 'load' ||
+                                (this.readyRegExp.test(target.readyState))) {
+            	        	var url = target.getAttribute("href");
+            	        	if (url &amp;&amp; window.__justep.__ResourceEngine.__loadingCss[url]){
+            	        		window.__justep.__ResourceEngine.__loadingCss[url].resolve(url);
+            	        	}
+                        }
+            		},
+            		
+            		onLinkError: function(evt){
+            	        var target = (evt.currentTarget || evt.srcElement);
+        	        	var url = target.getAttribute("href");
+        	        	if (url &amp;&amp; window.__justep.__ResourceEngine.__loadingCss[url]){
+        	        		window.__justep.__ResourceEngine.__loadingCss[url].resolve(url);
+        	        	}
+            		},
+            		
+            		initContextPath: function(){
+            			var baseURL = document.getElementById("_requireJS").src;
+            			var before = location.protocol + "//" + location.host;
+            			var after = "/system/lib/require/require.2.1.10.js";
+            			var i = baseURL.indexOf(after);
+            			if (i !== -1){
+    	        			var middle = baseURL.substring(before.length, i);
+    						var items = middle.split("/");
+    						
+    						
+    						if ((items[items.length-1].indexOf("v_") === 0) 
+    								&amp;&amp; (items[items.length-1].indexOf("l_") !== -1)
+    								&amp;&amp; (items[items.length-1].indexOf("s_") !== -1)
+    								&amp;&amp; (items[items.length-1].indexOf("d_") !== -1)
+    								|| (items[items.length-1]=="v_")){
+    							items.splice(items.length-1, 1);
+    						}
+    						
+    						
+    						if (items.length !== 1){
+    							window.__justep.__ResourceEngine.contextPath = items.join("/");
+    						}else{
+    							window.__justep.__ResourceEngine.contextPath = before;
+    						}
+    						var index = window.__justep.__ResourceEngine.contextPath.lastIndexOf("/");
+    						if (index != -1){
+    							window.__justep.__ResourceEngine.serverPath = window.__justep.__ResourceEngine.contextPath.substr(0, index);
+    						}else{
+    							window.__justep.__ResourceEngine.serverPath = window.__justep.__ResourceEngine.contextPath;
+    						}
+            			}else{
+            				throw new Error(baseURL + " hasn't  " + after);
+            			}
+            		},
+            	
+            		loadJs: function(urls){
+            			if (urls &amp;&amp; urls.length&gt;0){
+            				var loadeds = this._getResources("script", "src").concat(this.__loadedJS);
+    	       				for (var i=0; i&lt;urls.length; i++){
+    	       					var url = window.__justep.__ResourceEngine.contextPath + urls[i];
+    	        				if(!this._isLoaded(url, loadeds)){
+    	        					this.__loadedJS[this.__loadedJS.length] = url;
+    	        					/*
+    	        					var script = document.createElement("script");
+    	        					script.src = url;
+    	        					document.head.appendChild(script);
+    	        					*/
+    	        					//$("head").append("&lt;script  src='" + url + "'/&gt;");
+    	        					$.ajax({
+    	        						url: url,
+    	        						dataType: "script",
+    	        						cache: true,
+    	        						async: false,
+    	        						success: function(){}
+    	        						});
+    	        				} 
+    	       				}
+            			}
+            		},
+            		
+            		loadCss: function(styles){
+           				var loadeds = this._getResources("link", "href");
+            			if (styles &amp;&amp; styles.length&gt;0){
+            				for (var i=0; i&lt;styles.length; i++){
+    	       					var url = window.__justep.__ResourceEngine.contextPath + styles[i].url
+    	        				if(!this._isLoaded(url, loadeds)){
+    	        					var include = styles[i].include || "";
+    	        					var link = $("&lt;link type='text/css' rel='stylesheet' href='" + url + "' include='" + include + "'/&gt;");
+    	        					this.onLoadCss(url, link[0]);
+    	        					$("head").append(link);
+    	        				} 
+            				}
+            			}
+            			
+            		},
+            		
+            		
+            		_isLoaded: function(url, loadeds){
+            			if (url){
+            				var newUrl = "";
+            				var items = url.split("/");
+            				var isVls = false;
+            				for (var i=0; i&lt;items.length; i++){
+            					if (isVls){
+                					newUrl += "/" + items[i];
+            					}else{
+                					if (items[i] &amp;&amp; (items[i].indexOf("v_")===0)
+            								&amp;&amp; (items[i].indexOf("l_")!==-1)
+            								&amp;&amp; (items[i].indexOf("s_")!==-1)
+            								&amp;&amp; (items[i].indexOf("d_")!==-1)
+            								|| (items[i]=="v_")){
+                						isVls = true;
+                					}
+            					}
+            				}
+            				if (!newUrl)
+            					newUrl = url;
+            				
+            				for (var i=0; i&lt;loadeds.length; i++){
+    							if (loadeds[i] &amp;&amp; (loadeds[i].indexOf(newUrl)!==-1)){
+    								return true;
+    							}
+    						}
+            			}
+    					return false;
+            		},
+            		
+            		_getResources: function(tag, attr){
+    					var result = [];
+    					var scripts = $(tag);
+    					for (var i=0; i&lt;scripts.length; i++){
+    						var v = scripts[i][attr];
+    						if (v){
+    							result[result.length] = v;
+    						}
+    					}
+    					return result;
+            		}
+            	};
+            	
+            	window.__justep.__ResourceEngine.initContextPath();
+            	window.__justep.__isPackage = false;;
+    			requirejs.config({
+    				baseUrl: window.__justep.__ResourceEngine.contextPath + '/v_c683c4dcd6894083ab53ce7b59649adel_zh_CNs_d_/medicine',
+    			    paths: {
+    			    	'$model/UI2': window.__justep.__ResourceEngine.contextPath + '/v_c683c4dcd6894083ab53ce7b59649adel_zh_CNs_d_',
+    			    	'$model': window.__justep.__ResourceEngine.serverPath,
+    			        'text': window.__justep.__ResourceEngine.contextPath + '/v_c683c4dcd6894083ab53ce7b59649adel_zh_CNs_d_/system/lib/require/text.2.0.10',
+    			        'bind': window.__justep.__ResourceEngine.contextPath + '/v_c683c4dcd6894083ab53ce7b59649adel_zh_CNs_d_/system/lib/bind/bind',
+    			        'jquery': window.__justep.__ResourceEngine.contextPath + '/v_c683c4dcd6894083ab53ce7b59649adel_zh_CNs_d_/system/lib/jquery/jquery-1.11.1.min'
+    			    },
+    			    map: {
+    				        '*': {
+    				            res: '$model/UI2/system/lib/require/res',
+    				            cordova: '$model/UI2/system/lib/require/cordova',
+    				            w: '$model/UI2/system/lib/require/w',
+    				            css: '$model/UI2/system/lib/require/css'
+    				        }
+    				},
+    				waitSeconds: 300
+    			});
+    			
+    			requirejs(['require', 'jquery', '$model/UI2/system/lib/base/composition', '$model/UI2/system/lib/base/url', '$model/UI2/system/lib/route/hashbangParser', '$model/UI2/system/components/justep/loadingBar/loadingBar', '$model/UI2/system/lib/jquery/domEvent',  '$model/UI2/system/lib/cordova/cordova'],  function (require, $, composition, URL, HashbangParser) { 
+    				document.addEventListener('deviceready', function() {
+    	                if (navigator &amp;&amp; navigator.splashscreen &amp;&amp; navigator.splashscreen.hide) {
+    	                	/*延迟隐藏，视觉效果更理想*/
+    	                	setTimeout(function() {navigator.splashscreen.hide();}, 800);
+    	                }
+    	            }, false);
+    				var context = {};
+    				context.model = '$model/UI2/medicine/paidcontent.w' + (document.location.search || "");
+    				context.view = $('#applicationHost').children()[0];
+    				var element = document.getElementById('applicationHost');
+
+					    				
+    				
+    				var ownerid = new URL(window.__justep.__ResourceEngine.url).getParam("$ownerid");
+    				var pwindow = opener;
+    				if (!pwindow &amp;&amp; window.parent &amp;&amp; window.parent.window){
+    					pwindow = window.parent.window;
+    				}
+    				if(ownerid &amp;&amp; pwindow 
+    						&amp;&amp; pwindow.__justep &amp;&amp; pwindow.__justep.windowOpeners
+    						&amp;&amp; pwindow.__justep.windowOpeners[ownerid]
+    						&amp;&amp; $.isFunction(pwindow.__justep.windowOpeners[ownerid].sendToWindow)){
+    					var winOpener = pwindow.__justep.windowOpeners[ownerid];
+    					$(window).unload(function(event){
+    						if(winOpener &amp;&amp; winOpener.dispatchCloseEvent) winOpener.dispatchCloseEvent();
+    					});
+    					var params = winOpener.sendToWindow();
+						context.owner = winOpener;
+						if(params){
+							context.params = params.data || {};
+						}else{
+							context.params = {};
+						}
+	        			composition.compose(element, context);
+    				}else{
+        				var params =  {};
+    					var state = new HashbangParser(window.location.hash).parse().__state;
+    					if (state){
+    						params = state.get("");
+    						try{
+    							params = JSON.parse(params);
+    							if (params.hasOwnProperty("__singleValue__")){
+    								params = params.__singleValue__;
+    							}
+    						}catch(e1){}
+    					}
+    					context.noUpdateState = true;
+        				context.params = params;
+        				composition.compose(element, context);
+    				}
+    			});    
+            }
+		 	
+        </script> 
+  </body> 
+</html>

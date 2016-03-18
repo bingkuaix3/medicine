@@ -30,7 +30,8 @@ define(function(require) {
 				if (data.result == "fail") {
 					swal("登陆失败!", "请检查您的登陆信息!", "error")
 				} else {
-					window.location.href="../medicine/frame.w"
+					sessionStorage.setItem("key", data.result);
+					window.location.href = "../medicine/frame.w"
 				}
 			}
 		});
@@ -47,6 +48,7 @@ define(function(require) {
 				self.div1Click();
 			}
 		};
+
 	};
 
 	return Model;

@@ -75,7 +75,7 @@
         </div> 
       </div>  
       <div class="datadiv"> 
-        <div class="data">收货信息</div>  
+        <div class="data" id="data">收货信息</div>  
         <div class="border"/>  
         <div class="data name">收货人
           <input id="name" type="test" placeholder="请输入收货人"/> 

@@ -139,6 +139,9 @@ define(function(require) {
 		$(".jt").show()
 	};
 	Model.prototype.modelLoad = function(event) {
+		if (sessionStorage.getItem("key") == null) {
+			window.location.href = "../medicine/signin.w"
+		}
 		this.css();
 	};
 
@@ -149,18 +152,24 @@ define(function(require) {
 		data.refreshData();
 		singledata = data;
 		this._userid = data.getCurrentRow().val("userid");
-		$(".phototitle").html("来自" + data.getCurrentRow().val("username") + "的订单信息");
+		$(".phototitle").html("来自" + data.getCurrentRow().val("username") + "的图片信息");
+		// $("#photo").attr("src",
+		// "http://localhost:8080/img/R143rN8scL9K7G7CkUttKFIB0aHWdD6UI9YmlYqBZUwIhqBPb03Oh9UvxvUQbele.jpg");
 		$("#photo").attr("src", "http://www.jianhaola.com/img/" + data.getCurrentRow().val("picture") + ".jpg");
-		$(".consignee").html("<div class='photoicon'><i xid='i9' class='icon-person'/></div>" + data.getCurrentRow().val("consignee"));
-		$(".telephone").html("<div class='photoicon'><i xid='i10' class='icon-android-call'/></div>" + data.getCurrentRow().val("telephone"));
-		$(".adress").html("<div class='photoicon'><i xid='i11' class='icon-android-location'/></div>" + data.getCurrentRow().val("area") + "&nbsp&nbsp&nbsp" + data.getCurrentRow().val("address"));
-		$(".remarkstitle").html("来自" + data.getCurrentRow().val("username") + "的备注信息");
+		$("#photo").load(function() {
+			$(".menu").height(document.body.clientHeight * 0.1 + $(".main").height())
+		});
+		$(".consignee").html("收货人：" + data.getCurrentRow().val("consignee"));
+		$(".telephone").html("联系电话：" + data.getCurrentRow().val("telephone"));
+		$(".adress").html("收货地址：" + data.getCurrentRow().val("area") + "&nbsp&nbsp&nbsp" + data.getCurrentRow().val("address"));
+		$(".remarkstitle").html("来自" + data.getCurrentRow().val("username") + "的订单信息");
 		$(".number").html(data.getCurrentRow().val("number"));
 		if (data.getCurrentRow().val("remarks") == "") {
-			$(".remarkscontent").html("这位顾客没有留下备注信息");
+			$(".remarkscontent").html("备注信息：这位顾客没有留下备注信息");
 		} else {
-			$(".remarkscontent").html(data.getCurrentRow().val("remarks"));
+			$(".remarkscontent").html("备注信息：" + data.getCurrentRow().val("remarks"));
 		}
+
 	};
 
 	return Model;

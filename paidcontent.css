@@ -45,8 +45,8 @@ input:focus {
 
 .icon {
 	float: right;
-	width: 47px;
-	height: 47px;
+	width: 40px;
+	height: 40px;
 	background: url("../medicine/image/search.jpg") no-repeat scroll right
 		center transparent;
 }
@@ -306,13 +306,12 @@ input:focus {
 .main {
 	float: left;
 	width: 83%;
-	height: 82.5%;
 	background: rgb(228, 231, 234)
 }
 
 .table {
+	float: left;
 	width: 96%;
-	height: 92%;
 	margin-left: 2%;
 	margin-top: 2%;
 	background: white;
@@ -324,7 +323,6 @@ input:focus {
 
 .order {
 	width: 100%;
-	height: 80%;
 }
 
 .logistics {
@@ -335,12 +333,10 @@ input:focus {
 .image {
 	float: left;
 	width: 65%;
-	height: 100%;
 }
 
 .image img {
 	width: 100%;
-	height: 100%;
 }
 
 .info {
@@ -429,7 +425,7 @@ input:focus {
 	heigth: 100%;
 	padding-left: 5%;
 	line-height: 50px;
-	color: black
+	color: black;
 }
 
 .logisticsinfoa input {
@@ -447,5 +443,5 @@ input:focus {
 .logisticsinfob {
 	padding-left: 5%;
 	line-height: 50px;
-	color: black
+	color: black;
 }

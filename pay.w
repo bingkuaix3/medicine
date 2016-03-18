@@ -30,7 +30,7 @@
   <div class="main"> 
     <div class="title">商品信息</div>  
     <div class="image"> 
-      <img src="../medicine/image/blog.jpg"/> 
+      <img/> 
     </div>  
     <div class="logistics"> 
       <div id="logisticstitle">收货信息</div>  
@@ -61,6 +61,7 @@
     <div class="button"> 
       <div class="success" bind-click="div1Click">确认付款</div>  
       <div class="fail" bind-click="div2Click">取消交易</div> 
-    </div> 
+    </div>  
+    <div class="bottom"/> 
   </div> 
 </div>

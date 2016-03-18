@@ -1,3 +1,4 @@
+
 .head {
 	width: 100%;
 	border: 1px solid rgb(238, 238, 238);
@@ -45,8 +46,8 @@ input:focus {
 
 .icon {
 	float: right;
-	width: 47px;
-	height: 47px;
+	width: 40px;
+	height: 40px;
 	background: url("../medicine/image/search.jpg") no-repeat scroll right
 		center transparent;
 	cursor: pointer
@@ -166,7 +167,6 @@ span {
 .menu {
 	float: left;
 	width: 17%;
-	height: 92.5%;
 	background: rgb(29, 41, 57);
 	padding: 15px;
 }
@@ -244,7 +244,7 @@ span {
 	float: left;
 	width: 83%;
 	height: 10%;
-	background: rgb(247, 247, 247);
+	background-color: rgb(247, 247, 247);
 	border-bottom: 1px solid rgb(211, 215, 219);
 	letter-spacing: 2px
 }
@@ -307,13 +307,11 @@ span {
 .main {
 	float: left;
 	width: 83%;
-	height: 82.5%;
-	background: rgb(228, 231, 234)
+	background-color: rgb(228, 231, 234);
 }
 
-.table {
+.xxxxx {
 	width: 96%;
-	height: 92%;
 	margin-left: 2%;
 	margin-top: 2%;
 	background: white;
@@ -367,11 +365,8 @@ i:hover {
 }
 
 .page {
-	position: absolute;
-	width: 79%;
-	height: 40px;
-	right: 2%;
-	bottom: 4.5%;
+	width: 100%;
+	height: 45px;
 }
 
 .x-pagerbar.container-fluid {

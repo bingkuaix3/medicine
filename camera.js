@@ -220,9 +220,19 @@ define(function(require) {
 												"ordertime" : new Date()
 											} ]
 										})
-										data.saveData();
-										swal("您的订单提交成功!", "请耐心等待我们的回复!", "success");
-										wx.closeWindow();
+										data.saveData({
+											"onSuccess" : function() {
+												swal({
+													title : "下单成功",
+													text : "我们会在第一时间处理您的订单",
+													type : "success",
+													showCancelButton : false,
+													closeOnConfirm : false
+												}, function() {
+													wx.closeWindow();
+												});
+											}
+										})
 									}
 								});
 							}

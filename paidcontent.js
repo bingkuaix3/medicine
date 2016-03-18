@@ -25,19 +25,38 @@ define(function(require) {
 			}
 		});
 	}
+	Model.prototype.jumc = function(event) {
+		window.location.href = "../medicine/completed.w"
+	}
+	Model.prototype.jump = function(event) {
+		window.location.href = "../medicine/paid.w"
+	}
+	Model.prototype.jumu = function(event) {
+		window.location.href = "../medicine/frame.w"
+	}
+	Model.prototype.jumd = function(event) {
+		window.location.href = "../medicine/processed.w"
+	}
 	Model.prototype.menu = function(event) {
 		$(".over").show()
 		$(".jt").show()
 	};
 
-
 	Model.prototype.modelLoad = function(event) {
+		if (sessionStorage.getItem("key") == null) {
+			window.location.href = "../medicine/signin.w"
+		}
 		var id = this.getContext().getRequestParameter("id");
 		var data = this.comp("meddata");
 		data.filters.setVar("idd", id);
 		data.refreshData();
 		userid = data.getCurrentRow().val("userid");
 		$(".image img").attr("src", "http://www.jianhaola.com/img/" + data.getCurrentRow().val("picture") + ".jpg");
+		// $(".image img").attr("src",
+		// "http://localhost:8080/img/R143rN8scL9K7G7CkUttKFIB0aHWdD6UI9YmlYqBZUwIhqBPb03Oh9UvxvUQbele.jpg");
+		$(".image img").load(function() {
+			$(".menu").height(document.body.clientHeight * 0.055 + $(".main").height())
+		});
 		$("#conconsignee").html(data.getCurrentRow().val("consignee"))
 		$(".address span").html(data.getCurrentRow().val("area") + "&nbsp&nbsp&nbsp" + data.getCurrentRow().val("address"))
 		$(".con.dealtime span").html(data.getCurrentRow().val("dealtime"))

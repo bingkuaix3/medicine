@@ -37,10 +37,13 @@ define(function(require) {
 
 	Model.prototype.modelParamsReceive = function(event) {
 		id = this.getContext().getRequestParameter("state");
+		// id="C6FB359F6B0000013D4F7127F1B86200";
 		var data = this.comp("meddata");
 		data.filters.setVar("idd", id);
 		data.refreshData();
 		$(".image img").attr("src", "http://www.jianhaola.com/img/" + data.getCurrentRow().val("picture") + ".jpg");
+		// $(".image img").attr("src",
+		// "http://localhost:8080/img/R143rN8scL9K7G7CkUttKFIB0aHWdD6UI9YmlYqBZUwIhqBPb03Oh9UvxvUQbele.jpg");
 		$("#consignee").html(data.getCurrentRow().val("consignee"));
 		$("#telephone").html(data.getCurrentRow().val("telephone"));
 		$("#address").html(data.getCurrentRow().val("area") + "&nbsp&nbsp&nbsp" + data.getCurrentRow().val("address"));
@@ -75,30 +78,25 @@ define(function(require) {
 				data.setValue("dealtime", new Date());
 				data.saveData({
 					"onSuccess" : function() {
-						if (self.wxApi) {
-							self.wxApi.exec().done(function(wx) {
-								wx.closeWindow();
-							});
-						}
+						self.wxApi.exec().done(function(wx) {
+							wx.closeWindow();
+						});
 					}
 				})
-
 			}).fail(function() {
 				payDtd.reject(-20);
 			});
 		} else {
 			swal({
-				title : "您已支付过次订单",
+				title : "您已支付过此订单",
 				text : "",
 				type : "warning",
 				showCancelButton : false,
 				closeOnConfirm : false
 			}, function() {
-				if (self.wxApi) {
-					self.wxApi.exec().done(function(wx) {
-						wx.closeWindow();
-					});
-				}
+				self.wxApi.exec().done(function(wx) {
+					wx.closeWindow();
+				});
 			});
 		}
 

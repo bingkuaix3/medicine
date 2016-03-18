@@ -45,7 +45,7 @@
           <img class="portraitimg" src="../medicine/image/loggeduser.png"/>  
           <img class="jt" src="../medicine/image/jt.jpg"/> 
         </div>  
-        <div class="name">さよなら</div>  
+        <div class="name">国安药业</div>  
         <div class="triangle"> 
           <img src="../medicine/image/sj.jpg"/> 
         </div> 
@@ -58,24 +58,6 @@
         <i xid="i7" class="icon-home"/> 
       </div>  
       <span>首页</span> 
-    </div>  
-    <div class="menudiv"> 
-      <div class="i"> 
-        <i xid="i8" class="icon-android-forums"/> 
-      </div>  
-      <span>交流平台</span> 
-    </div>  
-    <div class="menudiv"> 
-      <div class="i"> 
-        <i xid="i8" class="icon-android-contact"/> 
-      </div>  
-      <span>个人信息</span> 
-    </div>  
-    <div class="menudiv"> 
-      <div class="i"> 
-        <i xid="i8" class="icon-clipboard"/> 
-      </div>  
-      <span>订单统计</span> 
     </div>  
     <div class="menudiv" id="extend" bind-click="extend" change="1"> 
       <div class="i"> 
@@ -101,6 +83,24 @@
         <i xid="i19" class="icon-arrow-right-b"/>  
         <span>已完成订单</span> 
       </div> 
+    </div>  
+    <div class="menudiv"> 
+      <div class="i"> 
+        <i xid="i8" class="icon-android-forums"/> 
+      </div>  
+      <span>交流平台</span> 
+    </div>  
+    <div class="menudiv"> 
+      <div class="i"> 
+        <i xid="i8" class="icon-android-contact"/> 
+      </div>  
+      <span>个人信息</span> 
+    </div>  
+    <div class="menudiv"> 
+      <div class="i"> 
+        <i xid="i8" class="icon-clipboard"/> 
+      </div>  
+      <span>订单统计</span> 
     </div>  
     <div class="menudiv"> 
       <div class="i"> 
@@ -158,26 +158,16 @@
   <div class="main"> 
     <div class="photo"> 
       <div class="phototitle"/>  
-      <img id="photo"/>  
-      <div class="consignee"> 
-        <div class="photoicon"> 
-          <i xid="i9" class="icon-person"/> 
-        </div> 
-      </div>  
-      <div class="telephone"> 
-        <div class="photoicon"> 
-          <i xid="i10" class="icon-android-call"/> 
-        </div> 
-      </div>  
-      <div class="adress"> 
-        <div class="photoicon"> 
-          <i xid="i11" class="icon-android-location"/> 
-        </div> 
-      </div> 
+      <img id="photo"/> 
     </div>  
     <div class="right remarks"> 
       <div class="remarkstitle"/>  
-      <div class="remarkscontent"/> 
+      <div class="remarkcontent"> 
+        <div class="consignee"/>  
+        <div class="telephone"/>  
+        <div class="adress"/>  
+        <div class="remarkscontent"/> 
+      </div> 
     </div>  
     <div class="right money"> 
       <div class="moneytitle">金额核算</div>  

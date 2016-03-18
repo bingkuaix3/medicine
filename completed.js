@@ -83,7 +83,16 @@ define(function(require) {
 		}
 
 	}
+	Model.prototype.css = function(event) {
+		$(".main").height(document.body.scrollHeight * 0.92);
+		$(".menu").height(document.body.scrollHeight * 0.89);
+		$(".xxxxx").css("height", "520px");
+	}
 	Model.prototype.modelLoad = function(event) {
+		if (sessionStorage.getItem("key") == null) {
+			window.location.href = "../medicine/signin.w"
+		}
+		this.css();
 		var self = this;
 		var data = this.comp("meddata");
 		data.filters.setVar("statee", "3");

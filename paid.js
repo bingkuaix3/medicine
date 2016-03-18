@@ -87,7 +87,16 @@ define(function(require) {
 		var row = event.bindingContext.$object;
 		window.location.href = "../medicine/paidcontent.w?id=" + row.val("id")
 	};
+	Model.prototype.css = function(event) {
+		$(".main").height(document.body.scrollHeight * 0.92);
+		$(".menu").height(document.body.scrollHeight * 0.89);
+		$(".xxxxx").css("height", "520px");
+	}
 	Model.prototype.modelLoad = function(event) {
+		if (sessionStorage.getItem("key") == null) {
+			window.location.href = "../medicine/signin.w"
+		}
+		this.css(event);
 		var self = this;
 		var data = this.comp("meddata");
 		data.filters.setVar("statee", "2");

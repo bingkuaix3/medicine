@@ -28,7 +28,7 @@
       <column label="logisticsnumber" name="logisticsnumber" type="String" xid="default33"/>  
       <column label="dealtime" name="dealtime" type="DateTime" xid="default34"/>  
       <column label="ordertime" name="ordertime" type="DateTime" xid="default35"/>  
-      <column label="managetime" name="managetime" type="DateTime" xid="default36"/>
+      <column label="managetime" name="managetime" type="DateTime" xid="default36"/> 
     </div> 
   </div>  
   <div class="head"> 
@@ -49,7 +49,7 @@
           <img class="portraitimg" src="../medicine/image/loggeduser.png"/>  
           <img class="jt" src="../medicine/image/jt.jpg"/> 
         </div>  
-        <div class="name">さよなら</div>  
+        <div class="name">国安药业</div>  
         <div class="triangle"> 
           <img src="../medicine/image/sj.jpg"/> 
         </div> 
@@ -62,6 +62,31 @@
         <i xid="i7" class="icon-home"/> 
       </div>  
       <span>首页</span> 
+    </div>  
+    <div class="menudiv" id="extend" bind-click="extend" change="1"> 
+      <div class="i"> 
+        <i xid="i8" class="icon-compose"/> 
+      </div>  
+      <span>订单操作</span>  
+      <i xid="i18" id="add" class="icon-android-remove"/> 
+    </div>  
+    <div class="submenu"> 
+      <div class="submenudiv" bind-click="jumu"> 
+        <i xid="i19" class="icon-arrow-right-b"/>  
+        <span>未处理订单</span> 
+      </div>  
+      <div class="submenudiv" bind-click="jumd"> 
+        <i xid="i19" class="icon-arrow-right-b"/>  
+        <span>已处理订单</span> 
+      </div>  
+      <div class="submenudiv" id="wcl" bind-click="jump"> 
+        <i xid="i19" class="icon-arrow-right-b"/>  
+        <span>已付款订单</span> 
+      </div>  
+      <div class="submenudiv" bind-click="jumc"> 
+        <i xid="i19" class="icon-arrow-right-b"/>  
+        <span>已完成订单</span> 
+      </div> 
     </div>  
     <div class="menudiv"> 
       <div class="i"> 
@@ -80,31 +105,6 @@
         <i xid="i8" class="icon-clipboard"/> 
       </div>  
       <span>订单统计</span> 
-    </div>  
-    <div class="menudiv" id="extend" bind-click="extend" change="1"> 
-      <div class="i"> 
-        <i xid="i8" class="icon-compose"/> 
-      </div>  
-      <span>订单操作</span>  
-      <i xid="i18" id="add" class="icon-android-remove"/> 
-    </div>  
-    <div class="submenu"> 
-      <div class="submenudiv"> 
-        <i xid="i19" class="icon-arrow-right-b"/>  
-        <span>未处理订单</span> 
-      </div>  
-      <div class="submenudiv"> 
-        <i xid="i19" class="icon-arrow-right-b"/>  
-        <span>已处理订单</span> 
-      </div>  
-      <div class="submenudiv" id="wcl"> 
-        <i xid="i19" class="icon-arrow-right-b"/>  
-        <span>已付款订单</span> 
-      </div>  
-      <div class="submenudiv"> 
-        <i xid="i19" class="icon-arrow-right-b"/>  
-        <span>已完成订单</span> 
-      </div> 
     </div>  
     <div class="menudiv"> 
       <div class="i"> 

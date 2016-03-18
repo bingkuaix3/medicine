@@ -1,6 +1,5 @@
 .main {
 	width: 100%;
-	height: 100%;
 	background: rgb(239, 239, 244)
 }
 
@@ -16,12 +15,10 @@
 .image {
 	margin-top: 1px;
 	width: 100%;
-	height: 37%;
 }
 
 .image img {
 	width: 100%;
-	height: 100%
 }
 
 .logistics {
@@ -91,22 +88,29 @@
 
 #total {
 	height: 60px;
-	border-bottom: 0px
+	border-bottom: 0px;
+	
 }
 
 .total {
 	font-size: 30px;
 	color: red;
 	line-height: 60px;
-	margin-left: 50%
+	margin-left: 50%;
+	
 }
 
 .button {
 	margin-top: 5%;
 }
 
+.bottom {
+	width: 100%;
+	height: 50px;
+}
+
 .button div {
-	width: 120px;
+	width: 30%;
 	height: 35px;
 	border-radius: 5px;
 	color: white;
