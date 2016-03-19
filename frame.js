@@ -86,9 +86,13 @@ define(function(require) {
 	}
 
 	Model.prototype.css = function(event) {
+	var self=this;
 		$(".main").height(document.body.scrollHeight * 0.92);
 		$(".menu").height(document.body.scrollHeight * 0.89);
 		$(".xxxxx").css("height", "520px");
+		setInterval(function(){
+		self.comp("meddata").refreshData();
+		},10000);
 	}
 	Model.prototype.modelLoad = function(event) {
 		if (sessionStorage.getItem("key") == null) {

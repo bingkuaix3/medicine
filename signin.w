@@ -4,17 +4,26 @@
   design="device:pc">  
   <div component="$UI/system/components/justep/model/model" xid="model" onLoad="modelLoad"/>  
   <div class="main"> 
+    <div class="compony">国安药业线上订单处理系统</div>  
     <div class="section"> 
       <div class="left"> 
         <div class="head">碾子科技</div>  
         <div class="Subtitle">欢迎使用线上订单处理系统！</div>  
         <div class="function"> 
           <ul> 
-            <li><div class="sub"></div>线上订单查看</li>  
-            <li><div class="sub"></div>订单数据处理</li>  
-            <li><div class="sub"></div>可视化分析</li>  
-            <li><div class="sub"></div>实时跟踪</li> 
-          </ul>
+            <li> 
+              <div class="sub"/>线上订单查看
+            </li>  
+            <li> 
+              <div class="sub"/>订单数据处理
+            </li>  
+            <li> 
+              <div class="sub"/>可视化分析
+            </li>  
+            <li> 
+              <div class="sub"/>实时跟踪
+            </li> 
+          </ul> 
         </div> 
       </div>  
       <div class="right"> 

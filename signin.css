@@ -7,11 +7,20 @@
 .section {
 	position: absolute;
 	left: 50%;
-	top: 50%;
+	top: 60%;
 	width: 800px;
 	height: 360px;
 	margin-left: -400px;
 	margin-top: -180px;
+}
+
+.compony {
+	padding-top: 5%;
+	font-weight: bold;
+	font-size: 57px;
+	text-align: center;
+	letter-spacing: 5px;
+	
 }
 
 .left {
@@ -63,10 +72,12 @@ input {
 	padding-left: 10px;
 	padding-right: 30px;
 }
+
 input:focus {
 	outline: none;
 	border: 1px solid rgb(153, 153, 153);
 }
+
 .username {
 	background: url("../medicine/image/head.jpg") no-repeat scroll right
 		center transparent;
@@ -94,7 +105,8 @@ input:focus {
 .head {
 	font-size: 25px;
 	font-weight: 600;
-	padding-left: 30px
+	padding-left: 30px;
+	color: rgb(99, 99, 99)
 }
 
 .Subtitle {
